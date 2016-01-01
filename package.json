@@ -1,0 +1,34 @@
+{
+  "name": "gmusic-theme.js",
+  "description": "",
+  "version": "1.0.0",
+  "homepage": "https://github.com/MarshallOfSound/gmusic-theme.js#readme",
+  "author": {
+    "name": "Samuel Attard",
+    "email": "samuel.r.attard@gmail.com",
+    "url": "samuelattard.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarshallOfSound/gmusic-theme.js.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarshallOfSound/gmusic-theme.js/issues"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^6.0.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "gruntify-eslint": "^1.3.0"
+  }
+}
