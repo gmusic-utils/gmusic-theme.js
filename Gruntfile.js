@@ -1,11 +1,5 @@
 module.exports = (grunt) => {
   grunt.initConfig({
-    eslint: {
-      options: {
-        configFile: '.eslintrc',
-      },
-      src: ['src/*.js'],
-    },
     babel: {
       options: {
         sourceMap: true,
@@ -17,6 +11,12 @@ module.exports = (grunt) => {
         },
       },
     },
+    eslint: {
+      options: {
+        configFile: '.eslintrc',
+      },
+      src: ['src/*.js'],
+    },
     uglify: {
       my_target: {
         files: {
@@ -24,12 +24,19 @@ module.exports = (grunt) => {
         },
       },
     },
+    watch: {
+      main: {
+        files: ['src/**/*.js'],
+        tasks: ['build']
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('gruntify-eslint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('gruntify-eslint');
 
   grunt.registerTask('test', ['eslint']);
   grunt.registerTask('build', ['eslint', 'babel', 'uglify']);
