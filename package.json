@@ -10,7 +10,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "grunt eslint"
+    "build": "grunt build",
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
