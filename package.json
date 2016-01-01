@@ -11,7 +11,8 @@
   "main": "index.js",
   "scripts": {
     "build": "grunt build",
-    "test": "grunt test"
+    "test": "grunt test",
+    "lint": "grunt eslint"
   },
   "repository": {
     "type": "git",
