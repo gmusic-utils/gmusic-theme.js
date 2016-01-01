@@ -8,13 +8,14 @@ This was built as part of [Google Play Music Desktop Player][], a C# wrapper aro
 
 `gmusic-theme.js` is not created by, affiliated with, or supported by Google Inc.
 
-[Google Play Music Desktop Player]: https://github.com/twolfson/google-music-webkit
+[Google Play Music Desktop Player]: https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-
+[Google Music]: https://play.google.com/music/listen
 
 ## Getting Started
 ### npm
 Install the module with: `npm install gmusic-theme.js`
 
-Once installed, add it to your HTML and access it via `window.GMusic`.
+Once installed, add it to your HTML and access it via `window.GMusicTheme`.
 
 ```html
 <script src="node_modules/gmusic-theme.js/dist/gmusic-theme.min.js"></script>
@@ -26,7 +27,7 @@ Once installed, add it to your HTML and access it via `window.GMusic`.
 ### Vanilla
 If you are not using a package manager, download the latest script at:
 
-https://raw.githubusercontent.com/MarshallOfSound/gmusic-theme.js/master/dist/gmusic-theme.min.js
+https://raw.githubusercontent.com/gmusic-utils/gmusic-theme.js/master/dist/gmusic-theme.min.js
 
 Then, add it to your HTML and access it via `window.GMusicTheme`.
 
