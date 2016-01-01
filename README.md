@@ -1,4 +1,5 @@
 # gmusic-theme.js
+[![Build Status](https://travis-ci.org/gmusic-utils/gmusic-theme.js.svg)](https://travis-ci.org/gmusic-utils/gmusic-theme.js)
 
 Browser-side JS library for theming [Google Music][].
 
