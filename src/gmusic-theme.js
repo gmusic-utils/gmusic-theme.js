@@ -30,8 +30,8 @@ window.GMusicTheme = class GMusicTheme {
     this.styleElement = document.createElement('style');
     document.body.appendChild(this.styleElement);
 
-    // DEV: updateColors calls redrawTheme
-    this.updateColors(options);
+    // DEV: updateTheme calls redrawTheme
+    this.updateTheme(options);
   }
 
   /**
