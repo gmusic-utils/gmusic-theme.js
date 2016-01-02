@@ -18,7 +18,12 @@
     "type": "git",
     "url": "git+https://github.com/MarshallOfSound/gmusic-theme.js.git"
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "UNLICENSE",
+      "url": "https://github.com/gmusic-utils/gmusic-theme.js/blob/master/UNLICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/MarshallOfSound/gmusic-theme.js/issues"
   },
