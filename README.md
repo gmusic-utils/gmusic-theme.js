@@ -64,7 +64,7 @@ Disables the current custom theme
 
 ### Customizing the Colors
 
-#### `updateColors(colorObject)`
+#### `updateTheme(colorObject)`
 Updates the colors used in the custom theme and redraws the theme.
 
 - colorObject - `Object` -  A colors object containing `backPrimary`, `backSecondary`,

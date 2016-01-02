@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+// DEV: These constants will be transformed into string constants by browserify
+const BASE_CSS = fs.readFileSync(__dirname + '/../build/rework.css', 'utf8');
+const BASE_SVG = fs.readFileSync(__dirname + '/../lib/logo.svg', 'utf8');
+const CONSTANTS = require('../lib/_constants');
+
 window.GMusicTheme = class GMusicTheme {
   /**
    * Constructor for a new Google Music Theme API.
@@ -41,7 +46,7 @@ window.GMusicTheme = class GMusicTheme {
    * Enables the custom theme
    */
   enable() {
-    document.body.classList.add('custom');
+    document.body.classList.add(CONSTANTS.CLASS_NAMESPACE);
     this.enabled = true;
     this._drawLogo();
   }
@@ -50,7 +55,7 @@ window.GMusicTheme = class GMusicTheme {
    * Disables the custom theme
    */
   disable() {
-    document.body.classList.remove('custom');
+    document.body.classList.remove(CONSTANTS.CLASS_NAMESPACE);
     this.enabled = false;
     this._drawLogo();
   }
@@ -62,7 +67,7 @@ window.GMusicTheme = class GMusicTheme {
    *                    `backHighlight`, `forePrimary`, `foreSecondary` attributes
    *                    any attribute not included will not be overriden
    */
-  updateColors(colorObject) {
+  updateTheme(colorObject) {
     this.BACK_PRIMARY = colorObject.backPrimary || this.BACK_PRIMARY;
     this.BACK_SECONDARY = colorObject.backSecondary || this.BACK_SECONDARY;
     this.BACK_HIGHLIGHT = colorObject.backHighlight || this.BACK_HIGHLIGHT;
@@ -73,7 +78,7 @@ window.GMusicTheme = class GMusicTheme {
 
   _drawLogo() {
     const logo = document.querySelectorAll('.menu-logo')[0];
-    const normalSVG = fs.readFileSync(__dirname + '/../lib/logo.svg', 'utf8');
+    const normalSVG = BASE_SVG;
     const customSVG = normalSVG.replace('#EE6B00', this.FORE_SECONDARY).replace('id="normalSVGIcon"', 'id="customSVGIcon"');
     let parent;
     let tmpSVG;
@@ -103,7 +108,7 @@ window.GMusicTheme = class GMusicTheme {
 
   _refreshStyleSheet() {
     // DEV: Take the current style string and put it in the style element in the DOM
-    this.styleElement.innerHTML = this._substituteColors(fs.readFileSync(__dirname + '/../build/rework.css', 'utf8'));
+    this.styleElement.innerHTML = this._substituteColors(BASE_CSS);
   }
 
   _substituteColors(styleString) {
