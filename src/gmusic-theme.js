@@ -1,5 +1,4 @@
 const fs = require('fs');
-const inline = require('inline');
 
 window.GMusicTheme = class GMusicTheme {
   /**
@@ -11,28 +10,30 @@ window.GMusicTheme = class GMusicTheme {
    */
   constructor(options = {}) {
     // DEV: Use the colors specified in the options or the default if it isn't set
-    this.BACK_PRIMARY = options.backPrimary || '#222326';
-    this.BACK_SECONDARY = options.backSecondary || '#121314';
-    this.BACK_HIGHLIGHT = options.backHighlight || '#615F59';
-    this.FORE_PRIMARY = options.forePrimary || '#FFFFFF';
-    this.FORE_SECONDARY = options.foreSecondary || '#1ED760';
+    this.BACK_PRIMARY = '#222326';
+    this.BACK_SECONDARY = '#121314';
+    this.BACK_HIGHLIGHT = '#615F59';
+    this.FORE_PRIMARY = '#FFFFFF';
+    this.FORE_SECONDARY = '#1ED760';
 
-    this.enabled = options.enabled || false;
+    this.enabled = false;
+    if (options.enabled) {
+      this.enable();
+    }
 
     // DEV: This is the style element where we put our custom CSS
     this.styleElement = document.createElement('style');
     document.body.appendChild(this.styleElement);
 
-    this.redrawTheme();
+    // DEV: updateColors calls redrawTheme
+    this.updateColors(options);
   }
 
   /**
    * Regenerates the custom CSS and and updates the SVG logo
    */
   redrawTheme() {
-    this.STYLE_STRING = '';
-    this._defaultStyles();
-    this._flushStyles();
+    this._refreshStyleSheet();
     this._drawLogo();
   }
 
@@ -70,22 +71,9 @@ window.GMusicTheme = class GMusicTheme {
     this.redrawTheme();
   }
 
-  _defaultStyles() {
-    this.STYLE_STRING += this._substituteColors(inline(function getDefaultStyles(require) {
-      // DEV: This 'inline' method will be transformed into a string which
-      //      is the result of the require call (the output of styles.js)
-      return require(process.cwd() + '/src/styles.js')();
-    }));
-  }
-
-  _flushStyles() {
-    // DEV: Take the current style string and put it in the style element in the DOM
-    this.styleElement.innerHTML = this.STYLE_STRING;
-  }
-
   _drawLogo() {
     const logo = document.querySelectorAll('.menu-logo')[0];
-    const normalSVG = fs.readFileSync(__dirname + '/logo.svg', 'utf8');
+    const normalSVG = fs.readFileSync(__dirname + '/../lib/logo.svg', 'utf8');
     const customSVG = normalSVG.replace('#EE6B00', this.FORE_SECONDARY).replace('id="normalSVGIcon"', 'id="customSVGIcon"');
     let parent;
     let tmpSVG;
@@ -111,6 +99,11 @@ window.GMusicTheme = class GMusicTheme {
       // DEV: If the logo isn't ready yet wait a few milliseconds and try again
       setTimeout(this._drawLogo, 10);
     }
+  }
+
+  _refreshStyleSheet() {
+    // DEV: Take the current style string and put it in the style element in the DOM
+    this.styleElement.innerHTML = this._substituteColors(fs.readFileSync(__dirname + '/../build/rework.css', 'utf8'));
   }
 
   _substituteColors(styleString) {

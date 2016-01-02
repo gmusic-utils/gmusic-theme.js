@@ -17,7 +17,7 @@ module.exports = (grunt) => {
           'dist/gmusic-theme.js': ['src/gmusic-theme.js'],
         },
         options: {
-          transform: ['brfs', 'browserify-inline-fn'],
+          transform: ['brfs'],
         },
       },
     },
@@ -27,8 +27,13 @@ module.exports = (grunt) => {
       },
       src: ['src/*.js'],
     },
+    execute: {
+      genCSS: {
+        src: ['lib/generate-stylesheet.js'],
+      },
+    },
     uglify: {
-      my_target: {
+      dist: {
         files: {
           'dist/gmusic-theme.min.js': ['dist/gmusic-theme.js'],
         },
@@ -47,9 +52,10 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-execute');
   grunt.loadNpmTasks('gruntify-eslint');
 
 
   grunt.registerTask('test', ['eslint']);
-  grunt.registerTask('build', ['eslint', 'browserify', 'babel', 'uglify']);
+  grunt.registerTask('build', ['eslint', 'execute:genCSS', 'browserify', 'babel', 'uglify']);
 };

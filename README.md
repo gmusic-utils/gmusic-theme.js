@@ -1,5 +1,5 @@
 # gmusic-theme.js
-[![Build Status](https://travis-ci.org/gmusic-utils/gmusic-theme.js.svg)](https://travis-ci.org/gmusic-utils/gmusic-theme.js)
+[![Build Status](https://travis-ci.org/gmusic-utils/gmusic-theme.js.svg?branch=master)](https://travis-ci.org/gmusic-utils/gmusic-theme.js)
 [![GitHub release](https://img.shields.io/github/tag/gmusic-utils/gmusic-theme.js.svg)]()
 [![Code Climate](https://img.shields.io/codeclimate/github/gmusic-utils/gmusic-theme.js.svg)]()
 [![GitHub license](https://img.shields.io/github/license/gmusic-utils/gmusic-theme.js.svg)]()
@@ -47,8 +47,12 @@ Then, add it to your HTML and access it via `window.GMusicTheme`.
 ## Documentation
 `gmusic-theme.js` exposes a constructor, `window.GMusicTheme`
 
-### `new GMusicTheme()`
+### `new GMusicTheme(config)`
 Constructor for a new Google Music Theme API.
+
+- config - `Object` -  An object containing `backPrimary`, `backSecondary`,
+`backHighlight`, `forePrimary`, `foreSecondary` and `enabled` attributes any attribute not
+included will not be changed from the defaults.  `enabled` is set to false by default.
 
 ### States
 
@@ -60,31 +64,12 @@ Disables the current custom theme
 
 ### Customizing the Colors
 
-#### `updateBackPrimary(color)`
-Updates the primary background color and redraws the theme
+#### `updateColors(colorObject)`
+Updates the colors used in the custom theme and redraws the theme.
 
-- color `String` - A string representing a hexadecimal color.  Must have a **#** at the start
-
-#### `updateBackSecondary(color)`
-Updates the secondary background color and redraws the theme
-
-- color `String` - A string representing a hexadecimal color.  Must have a **#** at the start
-
-#### `updateBackHighlight(color)`
-Updates the highlight background color and redraws the theme
-
-- color `String` - A string representing a hexadecimal color.  Must have a **#** at the start
-
-#### `updateForePrimary(color)`
-Updates the primary foreground color and redraws the theme
-
-- color `String` - A string representing a hexadecimal color.  Must have a **#** at the start
-
-#### `updateForeSecondary(color)`
-Updates the secondary foreground color and redraws the theme  
-**NOTE:** This is the color that updates the default orange / green highlights in GPM
-
-- color `String` - A string representing a hexadecimal color.  Must have a **#** at the start
+- colorObject - `Object` -  A colors object containing `backPrimary`, `backSecondary`,
+`backHighlight`, `forePrimary` and `foreSecondary` attributes any attribute not
+included will not be changed.
 
 ## Defaults
 All default colors for the custom theme are copied below
@@ -96,6 +81,9 @@ BACK_HIGHLIGHT = '#615F59';
 FORE_PRIMARY   = '#FFFFFF';
 FORE_SECONDARY = '#1ED760';
 ```
+
+## Color Format
+When changing colors you can use **ANY** CSS standard color syntax.  `#`, `rgb()`, `rgba()` Etc.
 
 
 ## Contributing
