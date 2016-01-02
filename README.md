@@ -1,5 +1,8 @@
 # gmusic-theme.js
 [![Build Status](https://travis-ci.org/gmusic-utils/gmusic-theme.js.svg)](https://travis-ci.org/gmusic-utils/gmusic-theme.js)
+[![GitHub release](https://img.shields.io/github/tag/gmusic-utils/gmusic-theme.js.svg)]()
+[![Code Climate](https://img.shields.io/codeclimate/github/gmusic-utils/gmusic-theme.js.svg)]()
+[![GitHub license](https://img.shields.io/github/license/gmusic-utils/gmusic-theme.js.svg)]()
 
 Browser-side JS library for theming [Google Music][].
 
@@ -11,6 +14,8 @@ This was built as part of [Google Play Music Desktop Player][], a C# wrapper aro
 
 [Google Play Music Desktop Player]: https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-
 [Google Music]: https://play.google.com/music/listen
+
+![](https://www.samuel.ninja/img/gpmdp_screen.gif)
 
 ## Getting Started
 ### npm
