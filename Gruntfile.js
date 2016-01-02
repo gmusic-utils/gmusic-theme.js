@@ -7,7 +7,17 @@ module.exports = (grunt) => {
       },
       dist: {
         files: {
-          'dist/gmusic-theme.js': 'src/gmusic-theme.js',
+          'dist/gmusic-theme.js': 'dist/gmusic-theme.js',
+        },
+      },
+    },
+    browserify: {
+      dist: {
+        files: {
+          'dist/gmusic-theme.js': ['src/gmusic-theme.js'],
+        },
+        options: {
+          transform: ['brfs', 'browserify-inline-fn'],
         },
       },
     },
@@ -27,17 +37,19 @@ module.exports = (grunt) => {
     watch: {
       main: {
         files: ['src/**/*.js'],
-        tasks: ['build']
-      }
-    }
+        tasks: ['build'],
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('gruntify-eslint');
 
+
   grunt.registerTask('test', ['eslint']);
-  grunt.registerTask('build', ['eslint', 'babel', 'uglify']);
+  grunt.registerTask('build', ['eslint', 'browserify', 'babel', 'uglify']);
 };
