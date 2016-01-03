@@ -57,8 +57,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.styleElement = document.createElement('style');
         document.body.appendChild(this.styleElement);
 
-        // DEV: updateColors calls redrawTheme
-        this.updateColors(options);
+        // DEV: updateTheme calls redrawTheme
+        this.updateTheme(options);
       }
 
       /**
