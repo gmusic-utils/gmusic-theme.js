@@ -1724,7 +1724,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
          }, {
             key: "_substituteColors",
             value: function _substituteColors(styleString) {
-               return styleString.replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY + ' ').replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY + ' ').replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT + ' ').replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY + ' ').replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY + ' ').replace(/<<BACK_SECONDARY_O>>/g, this._rgba(this.BACK_SECONDARY, 0.5) + ' ').replace(/<<NOTIMPORTANT>>\!important/g, '');
+               return styleString.replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY).replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY).replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT).replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY).replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY).replace(/<<BACK_SECONDARY_O>>/g, this._rgba(this.BACK_SECONDARY, 0.5)).replace(/<<NOTIMPORTANT>> \!important/g, '');
             }
          }]);
 
