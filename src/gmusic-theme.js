@@ -1,3 +1,4 @@
+const color = require('color');
 const fs = require('fs');
 
 // DEV: These constants will be transformed into string constants by browserify
@@ -111,12 +112,18 @@ window.GMusicTheme = class GMusicTheme {
     this.styleElement.innerHTML = this._substituteColors(BASE_CSS);
   }
 
+  _rgba(colorCode, opacity) {
+    return color(colorCode).clearer(opacity).rgbString();
+  }
+
   _substituteColors(styleString) {
     return styleString
-      .replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY)
-      .replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY)
-      .replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT)
-      .replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY)
-      .replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY);
+      .replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY + ' ')
+      .replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY + ' ')
+      .replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT + ' ')
+      .replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY + ' ')
+      .replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY + ' ')
+      .replace(/<<BACK_SECONDARY_O>>/g, this._rgba(this.BACK_SECONDARY, 0.5) + ' ')
+      .replace(/<<NOTIMPORTANT>>\!important/g, '');
   }
 };

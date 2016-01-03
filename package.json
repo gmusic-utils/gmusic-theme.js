@@ -26,7 +26,7 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "brfs": "^1.4.2",
-    "clean-css": "^3.4.8",
+    "color": "^0.11.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.1.1",
     "grunt": "^0.4.5",

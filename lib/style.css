@@ -129,6 +129,7 @@ body {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
+.song-row:hover,
 .song-row.hover .song-indicator,
 .song-row.hover .title-right-items,
 .song-row.hover .content,
@@ -272,8 +273,12 @@ paper-action-dialog {
   color: <<FORE_SECONDARY>>;
 }
 
+#loading-overlay.material[data-type="full-loading-overlay"], #loading-overlay.material[data-type="regular-loading-overlay"] {
+  background: <<BACK_SECONDARY_O>>;
+}
+
 #loading-overlay.material paper-spinner .circle {
-  border-color: <<FORE_SECONDARY>>;
+  border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>>;
 }
 
 a.primary {
