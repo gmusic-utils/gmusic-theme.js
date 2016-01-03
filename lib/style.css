@@ -22,6 +22,10 @@ body {
   background-color: <<BACK_SECONDARY>>;
 }
 
+#drawer, .material-card {
+  background-color: <<BACK_PRIMARY>>;
+}
+
 #nav-container,
 #loading-overlay,
 #loading-progress,
