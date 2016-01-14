@@ -8,7 +8,7 @@
     "email": "samuel.r.attard@gmail.com",
     "url": "samuelattard.com"
   },
-  "main": "index.js",
+  "main": "src/gmusic-theme.js",
   "scripts": {
     "build": "grunt build",
     "prepublish": "npm run build",
@@ -23,10 +23,12 @@
   "bugs": {
     "url": "https://github.com/gmusic-utils/gmusic-theme.js/issues"
   },
+  "dependencies": {
+    "color": "^0.11.0",
+    "brfs": "^1.4.2"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
-    "brfs": "^1.4.2",
-    "color": "^0.11.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.1.1",
     "grunt": "^0.4.5",
