@@ -56,6 +56,20 @@ body {
   background-color: <<BACK_PRIMARY>>;
 }
 
+#player.material paper-icon-button.playing::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.2em;
+  height: 2.4em;
+  width: 2.4em;
+  background: white;
+  margin-left: -1.2em;
+  z-index: -1;
+}
+
 #player.material:hover #material-player-progress #sliderContainer:not(.disabled) #sliderBar #progressContainer,
 .playlist-view .editable:hover {
   background: <<BACK_HIGHLIGHT>>;
