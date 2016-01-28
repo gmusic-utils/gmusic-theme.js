@@ -115,6 +115,8 @@ body {
 }
 
 .material .song-row .song-indicator {
+  background-image: url('ani_equalizer_white_x2.gif');
+  background-size: 28px 28px;
   background-color: <<BACK_PRIMARY>>;
 }
 
