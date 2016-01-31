@@ -56,6 +56,20 @@ body {
   background-color: <<BACK_PRIMARY>>;
 }
 
+#player.material paper-icon-button.playing::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.2em;
+  height: 2.4em;
+  width: 2.4em;
+  background: <<FORE_PRIMARY>>;
+  margin-left: -1.2em;
+  z-index: -1;
+}
+
 #player.material:hover #material-player-progress #sliderContainer:not(.disabled) #sliderBar #progressContainer,
 .playlist-view .editable:hover {
   background: <<BACK_HIGHLIGHT>>;
@@ -100,7 +114,13 @@ body {
   padding-top: 0;
 }
 
+/*
+* TODO: Add an option to gmusic-theme.js that handles the difference between
+*       light and dark themes.  The image below should be for "dark" themes only
+*/
 .material .song-row .song-indicator {
+  background-image: url('ani_equalizer_white_x2.gif');
+  background-size: 28px 28px;
   background-color: <<BACK_PRIMARY>>;
 }
 
@@ -385,6 +405,11 @@ paper-dialog .buttons paper-button,
 #player.material .material-player-middle paper-icon-button[data-id="shuffle"].active,
 #player.material #material-player-right-wrapper paper-icon-button[data-id="queue"].opened {
   color: <<FORE_SECONDARY>>;
+}
+
+.cluster .header .cluster-title,
+.cluster .header .subtitle {
+  color: <<FORE_PRIMARY>>;
 }
 
 .song-row .explicit,
