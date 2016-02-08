@@ -296,6 +296,10 @@ paper-action-dialog {
   background: <<BACK_SECONDARY_O>>;
 }
 
+iron-overlay-backdrop {
+  background: <<BACK_SECONDARY>>;
+}
+
 #loading-overlay.material paper-spinner .circle {
   border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>>;
 }
