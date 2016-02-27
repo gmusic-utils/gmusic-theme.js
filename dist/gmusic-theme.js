@@ -1694,6 +1694,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
             parent = logo.parentNode;
             if (this.logoObserver) {
               this.logoObserver.disconnect();
+              delete this.logoObserver;
             }
 
             if (this.enabled) {
