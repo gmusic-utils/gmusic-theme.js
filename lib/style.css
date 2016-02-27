@@ -441,10 +441,20 @@ paper-dialog {
 }
 
 .goog-buttonset-default {
-  background-color: <<FORE_HIGHLIGHT>>;
+  background-color: <<FORE_SECONDARY>>;
 }
 
 button.goog-buttonset-default,
 button.goog-buttonset-default:hover {
   background-color: <<FORE_SECONDARY>>;
+}
+
+.top-charts-view .song-row [data-col="index"] .column-content,
+.material-card .details .left-items .index,
+.more-songs-container {
+  color: <<FORE_SECONDARY>>;
+}
+
+.material-detail-view .top-tracks {
+  background-color: <<BACK_PRIMARY>>;
 }

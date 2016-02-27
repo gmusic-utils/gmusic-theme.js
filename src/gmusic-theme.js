@@ -86,6 +86,11 @@ window.GMusicTheme = class GMusicTheme {
 
     if (logo) {
       parent = logo.parentNode;
+      if (this.logoObserver) {
+        this.logoObserver.disconnect();
+        delete this.logoObserver;
+      }
+
       if (this.enabled) {
         // DEV: Only update the SVG element if we need to
         if (logo.nodeName === 'IMG' || logo.id === 'normalSVGIcon' || logo.getAttribute('current-custom') !== this.FORE_SECONDARY) {
@@ -101,6 +106,16 @@ window.GMusicTheme = class GMusicTheme {
           parent.appendChild((new DOMParser()).parseFromString(normalSVG, 'text/xml').firstChild);
         }
       }
+
+      // DEV: Google sometimes changes its logo by itself, we need to monitor this
+      this.logoObserver = new MutationObserver(() => {
+        this._drawLogo();
+      });
+      this.logoObserver.observe(parent, {
+        childList: true,
+        attributes: true,
+        subtree: true,
+      });
     } else {
       // DEV: If the logo isn't ready yet wait a few milliseconds and try again
       setTimeout(this._drawLogo, 10);
