@@ -300,7 +300,8 @@ iron-overlay-backdrop {
   background: <<BACK_SECONDARY>>;
 }
 
-#loading-overlay.material paper-spinner .circle {
+#loading-overlay.material paper-spinner .circle,
+#loading-overlay.material paper-spinner-lite .circle {
   border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>>;
 }
 
@@ -338,6 +339,7 @@ paper-toggle-button[checked] .toggle-ink {
 }
 
 .paper-slider-0 #sliderKnobInner.paper-slider,
+#sliderKnobInner.paper-slider,
 .paper-progress-0 #primaryProgress.paper-progress {
   background-color: <<FORE_SECONDARY>>;
 }
