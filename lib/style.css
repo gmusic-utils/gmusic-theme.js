@@ -117,13 +117,13 @@ body {
 * TODO: Add an option to gmusic-theme.js that handles the difference between
 *       light and dark themes.  The image below should be for "dark" themes only
 */
-.material .song-row .song-indicator {
+.song-row .song-indicator {
   background-image: url('ani_equalizer_white_x2.gif');
   background-size: 28px 28px;
   background-color: <<BACK_PRIMARY>>;
 }
 
-.material .song-row:hover .song-indicator {
+.song-row:hover .song-indicator {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
@@ -250,7 +250,7 @@ paper-action-dialog {
   color: <<FORE_PRIMARY>>;
 }
 
-.material .song-row:hover [data-col="index"] .hover-button[data-id="play"] {
+.song-row:hover [data-col="index"] .hover-button[data-id="play"] {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
@@ -352,13 +352,13 @@ paper-toggle-button[checked] .toggle-ink {
   background-color: <<FORE_SECONDARY>>;
 }
 
-.material a,
-.material .simple-dialog a {
+a,
+.simple-dialog a {
   color: <<FORE_PRIMARY>>;
 }
 
-.material .song-table [data-col="title"],
-.material .song-table.mini [data-col="song-details"] .song-title {
+.song-table [data-col="title"],
+.song-table.mini [data-col="song-details"] .song-title {
   color: <<FORE_PRIMARY>>;
 }
 
@@ -387,7 +387,7 @@ paper-dialog .buttons paper-button,
   background: <<BACK_HIGHLIGHT>>;
 }
 
-.material .song-row:hover [data-col="track"] .hover-button[data-id="play"] {
+.song-row:hover [data-col="track"] .hover-button[data-id="play"] {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
