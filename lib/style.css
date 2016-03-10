@@ -206,7 +206,8 @@ body.material,
   color: <<FORE_PRIMARY>>;
 }
 
-.goog-menu .goog-menuitem.selected .goog-menuitem-content {
+.goog-menu .goog-menuitem.selected .goog-menuitem-content,
+.goog-menu .goog-menuitem.selected .goog-menuitem-content:hover {
   color: <<FORE_SECONDARY>>;
 }
 
