@@ -2,11 +2,26 @@ const color = require('color');
 const fs = require('fs');
 
 // DEV: These constants will be transformed into string constants by browserify
-const BASE_CSS = fs.readFileSync(__dirname + '/../build/rework.css', 'utf8');
+const COMMON_CSS = fs.readFileSync(__dirname + '/../build/common.css', 'utf8');
+const HIGHLIGHT_CSS = fs.readFileSync(__dirname + '/../build/highlight.css', 'utf8');
+const FULL_CSS = fs.readFileSync(__dirname + '/../build/full.css', 'utf8');
 const BASE_SVG = fs.readFileSync(__dirname + '/../lib/logo.svg', 'utf8');
 const CONSTANTS = require('../lib/_constants');
 
-window.GMusicTheme = class GMusicTheme {
+const DEFAULTS = {
+  BACK_PRIMARY: '#222326',
+  BACK_SECONDARY: '#121314',
+  BACK_HIGHLIGHT: '#615F59',
+  FORE_PRIMARY: '#FFFFFF',
+  FORE_SECONDARY: '#EF6C00',
+};
+
+class GMusicTheme {
+  static TYPES = {
+    FULL: 'FULL',
+    HIGHLIGHT_ONLY: 'HIGHLIGHT_ONLY',
+  };
+
   /**
    * Constructor for a new Google Music Theme API.
    *
@@ -16,16 +31,13 @@ window.GMusicTheme = class GMusicTheme {
    */
   constructor(options = {}) {
     // DEV: Use the colors specified in the options or the default if it isn't set
-    this.BACK_PRIMARY = '#222326';
-    this.BACK_SECONDARY = '#121314';
-    this.BACK_HIGHLIGHT = '#615F59';
-    this.FORE_PRIMARY = '#FFFFFF';
-    this.FORE_SECONDARY = '#1ED760';
-
-    this.enabled = false;
-    if (options.enabled) {
-      this.enable();
-    }
+    this.BACK_PRIMARY = DEFAULTS.BACK_PRIMARY;
+    this.BACK_SECONDARY = DEFAULTS.BACK_SECONDARY;
+    this.BACK_HIGHLIGHT = DEFAULTS.BACK_HIGHLIGHT;
+    this.FORE_PRIMARY = DEFAULTS.FORE_PRIMARY;
+    this.FORE_SECONDARY = DEFAULTS.FORE_SECONDARY;
+    this.enabled = options.enabled || false;
+    this.type = GMusicTheme.TYPES.FULL;
 
     // DEV: This is the style element where we put our custom CSS
     this.styleElement = document.createElement('style');
@@ -41,24 +53,29 @@ window.GMusicTheme = class GMusicTheme {
   redrawTheme() {
     this._refreshStyleSheet();
     this._drawLogo();
+
+    // DEV: Add / Remove appropriate classes
+    if (this.enabled) {
+      document.documentElement.classList.add(CONSTANTS.CLASS_NAMESPACE);
+    } else {
+      document.documentElement.classList.remove(CONSTANTS.CLASS_NAMESPACE);
+    }
   }
 
   /**
-   * Enables the custom theme
-   */
+  * Enabled the custom theme
+  */
   enable() {
-    document.body.classList.add(CONSTANTS.CLASS_NAMESPACE);
     this.enabled = true;
-    this._drawLogo();
+    this.redrawTheme();
   }
 
   /**
    * Disables the custom theme
    */
   disable() {
-    document.body.classList.remove(CONSTANTS.CLASS_NAMESPACE);
     this.enabled = false;
-    this._drawLogo();
+    this.redrawTheme();
   }
 
   /**
@@ -69,11 +86,18 @@ window.GMusicTheme = class GMusicTheme {
    *                    any attribute not included will not be overriden
    */
   updateTheme(colorObject) {
+    // DEV: Validate the updateTheme type
+    if (colorObject.type !== undefined && GMusicTheme.TYPES[colorObject.type] === undefined) {
+      const validTypesStr = JSON.stringify(Object.keys(GMusicTheme.TYPES));
+      throw new Error(`\`updateTheme\` expected \`colorObject.type\` to be in ${validTypesStr}
+        but it was "${colorObject.type}"`);
+    }
     this.BACK_PRIMARY = colorObject.backPrimary || this.BACK_PRIMARY;
     this.BACK_SECONDARY = colorObject.backSecondary || this.BACK_SECONDARY;
     this.BACK_HIGHLIGHT = colorObject.backHighlight || this.BACK_HIGHLIGHT;
     this.FORE_PRIMARY = colorObject.forePrimary || this.FORE_PRIMARY;
     this.FORE_SECONDARY = colorObject.foreSecondary || this.FORE_SECONDARY;
+    this.type = colorObject.type || this.type;
     this.redrawTheme();
   }
 
@@ -123,8 +147,19 @@ window.GMusicTheme = class GMusicTheme {
   }
 
   _refreshStyleSheet() {
-    // DEV: Take the current style string and put it in the style element in the DOM
-    this.styleElement.innerHTML = this._substituteColors(BASE_CSS);
+    // DEV: Take the current style string and put it in the style element in the DOM)
+    let styles = COMMON_CSS;
+    switch (this.type) {
+      case GMusicTheme.TYPES.FULL:
+        styles += FULL_CSS;
+        break;
+      case GMusicTheme.TYPES.HIGHLIGHT_ONLY:
+        styles += HIGHLIGHT_CSS;
+        break;
+      default:
+        break;
+    }
+    this.styleElement.innerHTML = this._substituteColors(styles);
   }
 
   _rgba(colorCode, opacity) {
@@ -141,4 +176,6 @@ window.GMusicTheme = class GMusicTheme {
       .replace(/<<BACK_SECONDARY_O>>/g, this._rgba(this.BACK_SECONDARY, 0.5))
       .replace(/<<NOTIMPORTANT>> \!important/g, '');
   }
-};
+}
+
+window.GMusicTheme = GMusicTheme;

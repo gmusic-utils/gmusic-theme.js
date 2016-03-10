@@ -1,0 +1,23 @@
+/* Use the custom colors like so
+ * <<COLOR_NAME>>
+ * E.g. backSecondary is "<<BACK_SECONDARY>>"
+ */
+
+#material-app-bar {
+  background-color: <<FORE_SECONDARY>>;
+}
+
+.nav-item-container.selected {
+  color: <<FORE_SECONDARY>>;
+}
+
+body,
+.material-detail-view .material-container-details .info .description,
+.song-table th {
+  color: #212121;
+}
+
+.song-row .song-indicator {
+  background-image: url('ani_equalizer_black.gif');
+  background-size: 40px 40px;
+}
