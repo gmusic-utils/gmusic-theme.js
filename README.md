@@ -82,6 +82,16 @@ FORE_PRIMARY   = '#FFFFFF';
 FORE_SECONDARY = '#1ED760';
 ```
 
+|      BACK_PRIMARY     |      BACK_SECONDARY     |      BACK_HIGHLIGHT     |      FORE_PRIMARY     |      FORE_SECONDARY     |
+|-----------------------|-------------------------|-------------------------|-----------------------|-------------------------|
+| ![BACK_PRIMARY_IMG][] | ![BACK_SECONDARY_IMG][] | ![BACK_HIGHLIGHT_IMG][] | ![FORE_PRIMARY_IMG][] | ![FORE_SECONDARY_IMG][] |
+
+[BACK_PRIMARY_IMG]: https://img.shields.io/badge/%23222326-%20%20%20-222326.svg
+[BACK_SECONDARY_IMG]: https://img.shields.io/badge/%23121314-%20%20%20-121314.svg
+[BACK_HIGHLIGHT_IMG]: https://img.shields.io/badge/%23615F59-%20%20%20-615F59.svg
+[FORE_PRIMARY_IMG]: https://img.shields.io/badge/%23FFFFFF-%20%20%20-FFFFFF.svg
+[FORE_SECONDARY_IMG]: https://img.shields.io/badge/%231ED760-%20%20%20-1ED760.svg
+
 ## Color Format
 When changing colors you can use **ANY** CSS standard color syntax.  `#`, `rgb()`, `rgba()` Etc.
 
