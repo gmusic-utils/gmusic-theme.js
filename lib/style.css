@@ -216,7 +216,8 @@ body.material,
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
-.material-detail-view .artist-details .bio-wrapper .bio {
+.material-detail-view .artist-details .bio-wrapper .bio,
+.material-card .details paper-icon-button.menu-anchor {
   color: <<FORE_PRIMARY>>;
 }
 
