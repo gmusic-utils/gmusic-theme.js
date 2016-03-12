@@ -1,6 +1,6 @@
 {
   "name": "gmusic-theme.js",
-  "description": "",
+  "description": "Browser-side JS library for theming Google Music",
   "version": "1.0.17",
   "homepage": "https://github.com/gmusic-utils/gmusic-theme.js#readme",
   "author": {
