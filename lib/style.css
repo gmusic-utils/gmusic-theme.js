@@ -461,3 +461,22 @@ button.goog-buttonset-default:hover {
 .material-detail-view .top-tracks {
   background-color: <<BACK_PRIMARY>>;
 }
+
+paper-button#unsubscribe-playlist-button .playlist-subscribed,
+paper-button#unsubscribe-playlist-button:hover .playlist-unsubscribe {
+    color: <<FORE_PRIMARY>>;
+}
+
+paper-button#unsubscribe-playlist-button iron-icon[icon="sj:unsubscribe"] path:last-child,
+paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path {
+    fill: <<FORE_PRIMARY>>;
+}
+
+paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:last-child {
+    stroke: <<FORE_PRIMARY>>;
+}
+
+paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:first-child,
+paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:last-child {
+    fill: transparent;
+}
