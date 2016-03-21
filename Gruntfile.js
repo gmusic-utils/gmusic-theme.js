@@ -4,17 +4,18 @@ module.exports = (grunt) => {
       options: {
         sourceMap: true,
         presets: ['es2015'],
+        plugins: ['transform-class-properties'],
       },
       dist: {
         files: {
-          'dist/gmusic-theme.js': 'dist/gmusic-theme.js',
+          'dist/gmusic-theme.js': 'src/gmusic-theme.js',
         },
       },
     },
     browserify: {
       dist: {
         files: {
-          'dist/gmusic-theme.js': ['src/gmusic-theme.js'],
+          'dist/gmusic-theme.js': ['dist/gmusic-theme.js'],
         },
         options: {
           transform: ['brfs'],
@@ -57,5 +58,5 @@ module.exports = (grunt) => {
 
 
   grunt.registerTask('test', ['eslint']);
-  grunt.registerTask('build', ['eslint', 'execute:genCSS', 'browserify', 'babel', 'uglify']);
+  grunt.registerTask('build', ['eslint', 'execute:genCSS', 'babel', 'browserify', 'uglify']);
 };
