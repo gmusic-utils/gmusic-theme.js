@@ -85,7 +85,7 @@ body {
   color: <<FORE_PRIMARY>>;
 }
 
-.nav-item-container {
+.nav-item-container, .nav-item-container .owner-name  /* fore_primary_muted? */  {
   color: <<FORE_PRIMARY>>;
 }
 
