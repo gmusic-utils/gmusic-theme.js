@@ -1,0 +1,175 @@
+/* Use the custom colors like so
+ * <<COLOR_NAME>>
+ * E.g. backSecondary is "<<BACK_SECONDARY>>"
+ */
+
+#loading-progress-bar {
+ border: none;
+}
+
+#player.material paper-icon-button.playing > iron-icon::before {
+ content: '';
+ display: block;
+ position: absolute;
+
+ z-index: -1;
+ border-radius: 100%;
+ height: calc(100% - 16px);
+ width: calc(100% - 16px);
+ top: 8px;
+ left: 8px;
+}
+
+.cluster-text-protection::before,
+.cluster-text-protection {
+ background: transparent;
+}
+
+.nav-item-container:not(:focus):hover iron-icon {
+ color: <<FORE_SECONDARY>>;
+}
+
+#nav_collections .nav-item-container:focus iron-icon,
+.nav-item-container:focus iron-icon {
+ color: <<FORE_SECONDARY>>;
+}
+
+.fade-out:after {
+ display: none;
+}
+
+.column.col-0 .material-card:first-child .image-wrapper {
+ padding-top: 0;
+}
+
+.goog-menu .goog-menuitem.selected .goog-menuitem-content,
+.goog-menu .goog-menuitem.selected .goog-menuitem-content:hover {
+ color: <<FORE_SECONDARY>>;
+}
+
+.paper-progress-1 #primaryProgress.paper-progress {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.album-view .material-container-details .info .title .explicit {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label,
+.paper-input-container-0 .input-content.label-is-highlighted.paper-input-container .paper-input-label {
+ color: <<FORE_SECONDARY>>;
+}
+
+.paper-input-container-0 .add-on-content.is-highlighted.paper-input-container * {
+ color: <<FORE_SECONDARY>>;
+}
+
+.material-container-details paper-fab,
+#current-loading-progress {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+#player.material .material-player-middle paper-icon-button[data-id="play-pause"]:not([disabled]) {
+ color: <<FORE_SECONDARY>>;
+}
+
+#loading-overlay.material paper-spinner .circle,
+#loading-overlay.material paper-spinner-lite .circle {
+ border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>>;
+}
+
+a.primary {
+ color: <<FORE_SECONDARY>>;
+}
+
+paper-button.material-primary {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+paper-checkbox #checkbox.checked {
+ border-color: <<FORE_SECONDARY>>;
+ background-color: <<FORE_SECONDARY>>;
+}
+
+paper-checkbox #ink {
+ color: <<FORE_SECONDARY>>;
+}
+
+paper-toggle-button[checked] .toggle-button {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+paper-toggle-button[checked] .toggle-bar {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+paper-toggle-button[checked] .toggle-ink {
+ color: <<FORE_SECONDARY>>;
+}
+
+.paper-slider-0 #sliderKnobInner.paper-slider,
+#sliderKnobInner.paper-slider,
+.paper-progress-0 #primaryProgress.paper-progress {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.nav-item-container.selected iron-icon {
+ color: <<FORE_SECONDARY>>;
+}
+
+.upload-dialog-title {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.paper-input-container-0 .focused-line.paper-input-container {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.rating-container li {
+ -webkit-filter: invert(1);
+}
+
+#player.material .material-player-middle paper-icon-button[data-id="repeat"][value="LIST_REPEAT"],
+#player.material .material-player-middle paper-icon-button[data-id="repeat"][value="SINGLE_REPEAT"],
+#player.material .material-player-middle paper-icon-button[data-id="shuffle"][value="ALL_SHUFFLE"],
+#player.material .material-player-middle paper-icon-button[data-id="repeat"][value="LIST_REPEAT"],
+#player.material .material-player-middle paper-icon-button[data-id="repeat"][value="SINGLE_REPEAT"],
+#player.material .material-player-middle paper-icon-button[data-id="shuffle"][value="ALL_SHUFFLE"] {
+ color: <<FORE_SECONDARY>>;
+}
+
+.cluster .lane-button core-icon,
+.cluster .lane-button iron-icon,
+#player.material .material-player-middle paper-icon-button[data-id="repeat"].active,
+#player.material .material-player-middle paper-icon-button[data-id="shuffle"].active,
+#player.material #material-player-right-wrapper paper-icon-button[data-id="queue"].opened {
+ color: <<FORE_SECONDARY>>;
+}
+
+.song-row .explicit,
+.material-card .explicit {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.material-detail-view .material-container-details .read-more-button {
+ color: <<FORE_SECONDARY>>;
+}
+
+.goog-buttonset-default {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+button.goog-buttonset-default,
+button.goog-buttonset-default:hover {
+ background-color: <<FORE_SECONDARY>>;
+}
+
+.top-charts-view .song-row [data-col="index"] .column-content,
+.material-card .details .left-items .index,
+.more-songs-container {
+ color: <<FORE_SECONDARY>>;
+}
+
+#music-content .info-card paper-button {
+  color: <<FORE_SECONDARY>>;
+}

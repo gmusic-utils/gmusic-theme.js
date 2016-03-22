@@ -67,19 +67,23 @@ Disables the current custom theme
 #### `updateTheme(colorObject)`
 Updates the colors used in the custom theme and redraws the theme.
 
-- colorObject - `Object` -  A colors object containing `backPrimary`, `backSecondary`,
+- colorObject - `Object` -  A colors object containing `type`, `backPrimary`, `backSecondary`,
 `backHighlight`, `forePrimary` and `foreSecondary` attributes any attribute not
 included will not be changed.
 
+The `type` attribute can be any value from `window.GMusicTheme.TYPES`.  At the moment
+these are `"FULL"` and `"HIGHLIGHT_ONLY"`.  There are constants for these values that
+can be accessed through the types object.  E.g. `window.GMusicTheme.TYPES.HIGHLIGHT_ONLY`
+
 ## Defaults
-All default colors for the custom theme are copied below
+All defaults for the custom theme are copied below
 
 ```js
 BACK_PRIMARY   = '#222326';
 BACK_SECONDARY = '#121314';
 BACK_HIGHLIGHT = '#615F59';
 FORE_PRIMARY   = '#FFFFFF';
-FORE_SECONDARY = '#1ED760';
+FORE_SECONDARY = '#EF6C00';
 ```
 
 |      BACK_PRIMARY     |      BACK_SECONDARY     |      BACK_HIGHLIGHT     |      FORE_PRIMARY     |      FORE_SECONDARY     |
@@ -90,7 +94,7 @@ FORE_SECONDARY = '#1ED760';
 [BACK_SECONDARY_IMG]: https://img.shields.io/badge/%23121314-%20%20%20-121314.svg
 [BACK_HIGHLIGHT_IMG]: https://img.shields.io/badge/%23615F59-%20%20%20-615F59.svg
 [FORE_PRIMARY_IMG]: https://img.shields.io/badge/%23FFFFFF-%20%20%20-FFFFFF.svg
-[FORE_SECONDARY_IMG]: https://img.shields.io/badge/%231ED760-%20%20%20-1ED760.svg
+[FORE_SECONDARY_IMG]: https://img.shields.io/badge/%23EF6C00-%20%20%20-EF6C00.svg
 
 ## Color Format
 When changing colors you can use **ANY** CSS standard color syntax.  `#`, `rgb()`, `rgba()` Etc.
