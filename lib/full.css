@@ -89,6 +89,10 @@ body {
   color: <<FORE_PRIMARY>>;
 }
 
+.nav-item-container .owner-name {
+  color: <<FORE_PRIMARY_MUTED>>;
+}
+
 #nav_collections .nav-item-container:focus,
 .nav-item-container:focus,
 .nav-item-container:hover,
