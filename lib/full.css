@@ -207,7 +207,7 @@ body,
 }
 
 .material-detail-view .artist-details .bio-wrapper .bio,
- +.material-card .details paper-icon-button.menu-anchor {
+.material-card .details paper-icon-button.menu-anchor {
   color: <<FORE_PRIMARY>>;
 }
 
