@@ -47,7 +47,7 @@
  color: <<FORE_SECONDARY>>;
 }
 
-.paper-progress-1 #primaryProgress.paper-progress {
+#primaryProgress.paper-progress {
  background-color: <<FORE_SECONDARY>>;
 }
 
