@@ -156,6 +156,15 @@ body {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
+.song-row [data-col="radio"],
+.song-row [data-col="radio"] svg,
+.song-row.hover [data-col="radio"],
+.song-row.hover [data-col="radio"] svg,
+.song-row.selected-song-row [data-col="radio"],
+.song-row.selected-song-row [data-col="radio"] svg, {
+  color: <<FORE_SECONDARY>>;
+}
+
 body,
 .material-detail-view .material-container-details .info .description,
 .song-table th {
