@@ -334,7 +334,8 @@ paper-dialog {
 }
 
 .simple-dialog,
-.simple-dialog > div {
+.simple-dialog > div,
+.edit-section > div.browseSubtext {
   background-color: <<BACK_PRIMARY>>;
   color: <<FORE_PRIMARY>>;
 }
