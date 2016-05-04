@@ -111,6 +111,11 @@ paper-toggle-button[checked] .toggle-ink {
 #sliderKnobInner.paper-slider,
 .paper-progress-0 #primaryProgress.paper-progress {
  background-color: <<FORE_SECONDARY>>;
+ border-color: <<FORE_SECONDARY>>;
+}
+
+paper-ripple#ink.paper-slider {
+ color: <<FORE_SECONDARY>>;
 }
 
 .nav-item-container.selected iron-icon {
