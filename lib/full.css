@@ -366,3 +366,8 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:fi
 paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:last-child {
     fill: transparent;
 }
+
+.podcast-badge {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
