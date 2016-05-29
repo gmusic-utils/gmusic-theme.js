@@ -76,7 +76,7 @@ body {
 
 .cluster-text-protection::before,
 .cluster-text-protection {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
 }
 
 .title,
@@ -240,7 +240,7 @@ paper-action-dialog {
 }
 
 #queue-overlay::after {
-  border-color: transparent transparent <<BACK_PRIMARY>> <<BACK_PRIMARY>>;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) <<BACK_PRIMARY>> <<BACK_PRIMARY>>;
 }
 
 .upload-dialog-content {
@@ -364,5 +364,10 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 
 paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:first-child,
 paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:last-child {
-    fill: transparent;
+    fill: rgba(0, 0, 0, 0);
+}
+
+.podcast-badge {
+  color: <<FORE_PRIMARY>>;
+  background-color: rgba(0, 0, 0, 0);
 }
