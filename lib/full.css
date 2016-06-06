@@ -371,3 +371,37 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
   color: <<FORE_PRIMARY>>;
   background-color: rgba(0, 0, 0, 0);
 }
+
+/** Scrollbar Theming **/
+::-webkit-scrollbar,
+::shadow ::-webkit-scrollbar {
+  width: 9px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track,
+::shadow ::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-track:hover,
+::shadow ::-webkit-scrollbar-track:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-track:active,
+::shadow ::-webkit-scrollbar-track:active {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+::-webkit-scrollbar-thumb,
+::shadow ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover,
+::shadow ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+::-webkit-scrollbar-thumb:active,
+::shadow ::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255, 0.125);
+}
