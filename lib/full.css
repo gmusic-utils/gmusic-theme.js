@@ -14,17 +14,17 @@
   color: <<FORE_PRIMARY>>;
 }
 
-.sj-search-box-0,
-.sj-search-box-0[opened],
-.sj-search-box-0[has-query] {
+sj-search-box,
+sj-search-box[opened],
+sj-search-box[has-query] {
   background-color: <<BACK_PRIMARY>>;
 }
 
-.sj-search-box-0 #input.sj-search-box {
+sj-search-box #input.sj-search-box {
   color: <<FORE_PRIMARY>>;
 }
 
-.sj-search-box-0[opened]:not([num-suggestions="0"]) #input.sj-search-box {
+sj-search-box[opened]:not([num-suggestions="0"]) #input.sj-search-box {
   border-bottom-color: <<BACK_HIGHLIGHT>>;
 }
 
