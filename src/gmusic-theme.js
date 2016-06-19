@@ -170,6 +170,15 @@ class GMusicTheme {
     return color(colorCode).darken(percentage).rgbString();
   }
 
+  _inverse(colorCode) {
+    const rgb = color(colorCode).rgb();
+    return color({
+      r: 255 - rgb.r,
+      g: 255 - rgb.g,
+      b: 255 - rgb.b,
+    }).rgbString();
+  }
+
   _substituteColors(styleString) {
     return styleString
       .replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY)
@@ -179,6 +188,7 @@ class GMusicTheme {
       .replace(/<<FORE_PRIMARY_MUTED>>/g, this._darken(this.FORE_PRIMARY, 0.4))
       .replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY)
       .replace(/<<BACK_SECONDARY_O>>/g, this._rgba(this.BACK_SECONDARY, 0.5))
+      .replace(/<<INVERSE>>(.+?)<<\/INVERSE>>/g, (s, colorString) => this._inverse(colorString))
       .replace(/<<NOTIMPORTANT>> \!important/g, '');
   }
 }
