@@ -14,19 +14,27 @@
   color: <<FORE_PRIMARY>>;
 }
 
+.sj-search-box-0,
 .sj-search-box-0[opened],
 .sj-search-box-0[has-query] {
   background-color: <<BACK_PRIMARY>>;
 }
 
+.sj-search-box-0 #input.sj-search-box {
+  color: <<FORE_PRIMARY>>;
+}
+
 .sj-search-box-0[opened]:not([num-suggestions="0"]) #input.sj-search-box {
   border-bottom-color: <<BACK_HIGHLIGHT>>;
-  color: <<FORE_PRIMARY>>;
 }
 
 sj-search-suggestion:hover,
 sj-search-suggestion.query-selected {
   background-color: <<BACK_HIGHLIGHT>>;
+}
+
+sj-search-suggestion #queryText.sj-search-suggestion .sub-match.sj-search-suggestion {
+  color: <<FORE_PRIMARY>>;
 }
 
 #material-one-left #left-nav-open-button svg {
