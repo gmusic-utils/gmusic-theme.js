@@ -113,7 +113,7 @@ body {
 }
 
 .nav-item-container .owner-name {
-  color: <<FORE_PRIMARY_MUTED>>;
+  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>>;
 }
 
 #nav_collections .nav-item-container:focus,
@@ -293,7 +293,7 @@ paper-action-dialog {
 }
 
 #loading-overlay.material[data-type="full-loading-overlay"], #loading-overlay.material[data-type="regular-loading-overlay"] {
-  background: <<BACK_SECONDARY_O>>;
+  background: <<ALPHA 0.5>><<BACK_SECONDARY>><</ALPHA>>;
 }
 
 iron-overlay-backdrop {
