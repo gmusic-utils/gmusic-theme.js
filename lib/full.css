@@ -14,6 +14,29 @@
   color: <<FORE_PRIMARY>>;
 }
 
+sj-search-box,
+sj-search-box[opened],
+sj-search-box[has-query] {
+  background-color: <<BACK_PRIMARY>>;
+}
+
+sj-search-box #input.sj-search-box {
+  color: <<FORE_PRIMARY>>;
+}
+
+sj-search-box[opened]:not([num-suggestions="0"]) #input.sj-search-box {
+  border-bottom-color: <<BACK_HIGHLIGHT>>;
+}
+
+sj-search-suggestion:hover,
+sj-search-suggestion.query-selected {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+
+sj-search-suggestion #queryText.sj-search-suggestion .sub-match.sj-search-suggestion {
+  color: <<FORE_PRIMARY>>;
+}
+
 #material-one-left #left-nav-open-button svg {
   fill: <<FORE_PRIMARY>>;
 }
@@ -306,8 +329,11 @@ a,
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
+.material-detail-view .material-container-details .read-more-button:hover {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+
 paper-action-dialog paper-button,
-paper-dialog .buttons paper-button,
 .share-buttons .share-button .button-label {
   color: <<FORE_PRIMARY>>;
 }

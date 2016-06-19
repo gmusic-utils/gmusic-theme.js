@@ -11,7 +11,7 @@ const CONSTANTS = require('../lib/_constants');
 const DEFAULTS = {
   BACK_PRIMARY: '#222326',
   BACK_SECONDARY: '#121314',
-  BACK_HIGHLIGHT: '#615F59',
+  BACK_HIGHLIGHT: '#615F59', // #1a1b1d
   FORE_PRIMARY: '#FFFFFF',
   FORE_SECONDARY: '#FF5722',
 };
