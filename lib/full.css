@@ -285,6 +285,11 @@ a,
   color: <<FORE_PRIMARY>>;
 }
 
+#topBar #material-one-right a {
+  /* Reset Color to GPM Default */
+  color: #666;
+}
+
 .song-table [data-col="title"],
 .song-table.mini [data-col="song-details"] .song-title {
   color: <<FORE_PRIMARY>>;
