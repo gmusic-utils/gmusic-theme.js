@@ -179,6 +179,7 @@ body,
   background-color: <<BACK_PRIMARY>>;
 }
 
+.song-row:hover [data-col="index"] .song-indicator,
 .song-row.hover [data-col="index"] .song-indicator,
 .song-row.selected-song-row [data-col="index"] .song-indicator {
   background-color: <<BACK_HIGHLIGHT>>;
