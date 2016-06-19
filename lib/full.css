@@ -306,9 +306,8 @@ a,
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
-
 .material-detail-view .material-container-details .read-more-button:hover {
- background-color: <<BACK_HIGHLIGHT>>;
+  background-color: <<BACK_HIGHLIGHT>>;
 }
 
 paper-action-dialog paper-button,
