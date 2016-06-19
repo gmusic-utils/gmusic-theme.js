@@ -8,7 +8,7 @@
     "email": "samuel.r.attard@gmail.com",
     "url": "samuelattard.com"
   },
-  "main": "src/gmusic-theme.js",
+  "main": "dist/gmusic-theme.js",
   "scripts": {
     "build": "grunt build",
     "prepublish": "npm run build",
