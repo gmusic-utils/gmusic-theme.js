@@ -164,6 +164,10 @@ paper-ripple#ink.paper-slider {
  background-color: <<FORE_SECONDARY>>;
 }
 
+paper-dialog .buttons paper-button {
+  color: <<FORE_SECONDARY>>;
+}
+
 button.goog-buttonset-default,
 button.goog-buttonset-default:hover {
  background-color: <<FORE_SECONDARY>>;

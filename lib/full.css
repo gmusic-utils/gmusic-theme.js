@@ -306,8 +306,12 @@ a,
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
+
+.material-detail-view .material-container-details .read-more-button:hover {
+ background-color: <<BACK_HIGHLIGHT>>;
+}
+
 paper-action-dialog paper-button,
-paper-dialog .buttons paper-button,
 .share-buttons .share-button .button-label {
   color: <<FORE_PRIMARY>>;
 }
