@@ -130,10 +130,6 @@ paper-ripple#ink.paper-slider {
  background-color: <<FORE_SECONDARY>>;
 }
 
-.rating-container li {
- -webkit-filter: invert(1);
-}
-
 #player.material .material-player-middle paper-icon-button[data-id="repeat"][value="LIST_REPEAT"],
 #player.material .material-player-middle paper-icon-button[data-id="repeat"][value="SINGLE_REPEAT"],
 #player.material .material-player-middle paper-icon-button[data-id="shuffle"][value="ALL_SHUFFLE"],

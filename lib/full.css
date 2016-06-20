@@ -188,6 +188,19 @@ body {
   color: <<FORE_SECONDARY>>;
 }
 
+.song-row:hover [data-col="rating"] {
+  -webkit-filter: invert(1) brightness(10);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.song-row:hover [data-col="rating"] > ul {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.song-row:hover [data-col="rating"] > ul > li {
+  -webkit-filter: brightness(10) invert(1);
+}
+
 body,
 .material-detail-view .material-container-details .info .description,
 .song-table th {
@@ -340,7 +353,7 @@ paper-action-dialog paper-button,
 
 .song-row:hover td,
 .song-row:hover td > * {
-  background: <<BACK_HIGHLIGHT>>;
+  background-color: <<BACK_HIGHLIGHT>>;
 }
 
 .song-row:hover [data-col="track"] .hover-button[data-id="play"] {
