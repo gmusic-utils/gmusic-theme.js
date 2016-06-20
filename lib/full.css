@@ -344,7 +344,8 @@ paper-action-dialog paper-button,
 }
 
 .song-row:hover [data-col="track"] .hover-button[data-id="play"] {
-  background-color: <<BACK_HIGHLIGHT>>;
+  background-color: <<INVERSE>><<BACK_HIGHLIGHT>><</INVERSE>>;
+  -webkit-filter: invert(1);
 }
 
 .rating-container li {
