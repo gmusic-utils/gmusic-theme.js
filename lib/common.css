@@ -51,10 +51,6 @@
  background-color: <<FORE_SECONDARY>>;
 }
 
-.album-view .material-container-details .info .title .explicit {
- background-color: <<FORE_SECONDARY>>;
-}
-
 .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label,
 .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container .paper-input-label {
  color: <<FORE_SECONDARY>>;
@@ -147,9 +143,8 @@ paper-ripple#ink.paper-slider {
  color: <<FORE_SECONDARY>>;
 }
 
-.song-row .explicit,
-.material-card .explicit {
- background-color: <<FORE_SECONDARY>>;
+iron-icon[icon="av:explicit"] {
+ color: <<FORE_SECONDARY>>;
 }
 
 .material-detail-view .material-container-details .read-more-button {
