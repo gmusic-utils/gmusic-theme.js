@@ -159,6 +159,10 @@ paper-dialog .buttons paper-button {
  color: <<FORE_SECONDARY>>;
 }
 
+paper-dialog .buttons paper-button[disabled] {
+  color: black;
+}
+
 button.goog-buttonset-default,
 button.goog-buttonset-default:hover {
  background-color: <<FORE_SECONDARY>>;
@@ -173,3 +177,23 @@ button.goog-buttonset-default:hover {
 #music-content .info-card paper-button {
   color: <<FORE_SECONDARY>>;
 }
+
+/** 19/8/2016 Update **/
+.primary {
+  color: <<FORE_SECONDARY>>;
+}
+
+#playlist-drawer sj-play-button {
+  --sj-play-button-primary-color: <<FORE_SECONDARY>>;
+  --sj-play-button-pulse-color: <<ALPHA 0.3>><<FORE_SECONDARY>><</ALPHA>>;
+}
+
+.focused-line.paper-input-container {
+  background-color: <<FORE_SECONDARY>>;
+}
+
+.input-content.label-is-floating.paper-input-container  label,
+.input-content.label-is-floating.paper-input-container  .paper-input-label {
+  color: <<FORE_SECONDARY>>;
+}
+/** Update End **/

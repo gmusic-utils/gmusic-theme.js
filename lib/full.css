@@ -113,7 +113,7 @@ body {
 }
 
 .nav-item-container .owner-name {
-  color: <<FORE_PRIMARY_MUTED>>;
+  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>>;
 }
 
 #nav_collections .nav-item-container:focus,
@@ -306,7 +306,7 @@ paper-action-dialog {
 }
 
 #loading-overlay.material[data-type="full-loading-overlay"], #loading-overlay.material[data-type="regular-loading-overlay"] {
-  background: <<BACK_SECONDARY_O>>;
+  background: <<ALPHA 0.5>><<BACK_SECONDARY>><</ALPHA>>;
 }
 
 iron-overlay-backdrop {
@@ -422,6 +422,31 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 .screensaver > canvas {
   -webkit-filter: invert(1) brightness(0.4);
 }
+
+/** 19/8/2016 Update **/
+#playlist-drawer paper-header-panel paper-toolbar {
+  background: <<BACK_PRIMARY>>;
+}
+
+#playlist-drawer paper-header-panel playlist-drawer-header {
+  color: <<FORE_PRIMARY>>;
+}
+
+#playlist-drawer .playlist-drawer-item .playlist-wrapper:hover,
+#playlist-drawer .playlist-drawer-item .playlist-wrapper:focus,
+#playlist-drawer .playlist-drawer-item sj-play-button:hover~.playlist-wrapper,
+#playlist-drawer .playlist-drawer-item iron-icon:hover~.playlist-wrapper,
+#playlist-drawer .playlist-drawer-item.playlist-drop-target:not(.subscribed) .playlist-wrapper {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+
+.input-content.paper-input-container  input,
+.input-content.paper-input-container  textarea,
+.input-content.paper-input-container  iron-autogrow-textarea,
+.input-content.paper-input-container  .paper-input-input {
+  color: <<DARKEN 0.3>><<FORE_PRIMARY>><</DARKEN>>;
+}
+/** Update End **/
 
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
