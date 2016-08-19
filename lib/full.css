@@ -419,6 +419,10 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
   background-color: rgba(0, 0, 0, 0);
 }
 
+.screensaver > canvas {
+  -webkit-filter: invert(1) brightness(0.4);
+}
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
