@@ -1,11 +1,12 @@
-const color = require('color');
+import color from 'color';
+
 const fs = require('fs');
 
 // DEV: These constants will be transformed into string constants by browserify
-const COMMON_CSS = fs.readFileSync(__dirname + '/../build/common.css', 'utf8');
-const HIGHLIGHT_CSS = fs.readFileSync(__dirname + '/../build/highlight.css', 'utf8');
-const FULL_CSS = fs.readFileSync(__dirname + '/../build/full.css', 'utf8');
-const BASE_SVG = fs.readFileSync(__dirname + '/../lib/logo.svg', 'utf8');
+const COMMON_CSS = fs.readFileSync(`${__dirname}/../build/common.css`, 'utf8');
+const HIGHLIGHT_CSS = fs.readFileSync(`${__dirname}/../build/highlight.css`, 'utf8');
+const FULL_CSS = fs.readFileSync(`${__dirname}/../build/full.css`, 'utf8');
+const BASE_SVG = fs.readFileSync(`${__dirname}/../lib/logo.svg`, 'utf8');
 const CONSTANTS = require('../lib/_constants');
 
 const DEFAULTS = {
@@ -123,12 +124,10 @@ class GMusicTheme {
           tmpSVG.setAttribute('current-custom', this.FORE_SECONDARY);
           parent.appendChild(tmpSVG);
         }
-      } else {
+      } else if (logo.nodeName === 'IMG' || logo.id === 'customSVGIcon') {
         // DEV: Only update the SVG element if we need to
-        if (logo.nodeName === 'IMG' || logo.id === 'customSVGIcon') {
-          parent.removeChild(logo);
-          parent.appendChild((new DOMParser()).parseFromString(normalSVG, 'text/xml').firstChild);
-        }
+        parent.removeChild(logo);
+        parent.appendChild((new DOMParser()).parseFromString(normalSVG, 'text/xml').firstChild);
       }
 
       // DEV: Google sometimes changes its logo by itself, we need to monitor this
@@ -159,7 +158,7 @@ class GMusicTheme {
       default:
         break;
     }
-    this.styleElement.innerHTML = this._substituteColors(styles);
+    this.styleElement.innerHTML = this.substituteColors(styles);
   }
 
   _rgba(colorCode, opacity) {
@@ -179,7 +178,7 @@ class GMusicTheme {
     }).rgbString();
   }
 
-  _substituteColors(styleString) {
+  substituteColors(styleString) {
     return styleString
       .replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY)
       .replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY)
@@ -189,8 +188,8 @@ class GMusicTheme {
       .replace(/<<DARKEN ([01]+.?[0-9]*)>>(.+?)<<\/DARKEN>>/g, (s, n, colorString) => this._darken(colorString, parseFloat(n)))
       .replace(/<<ALPHA ([01]+.?[0-9]*)>>(.+?)<<\/ALPHA>>/g, (s, n, colorString) => this._rgba(colorString, parseFloat(n)))
       .replace(/<<INVERSE>>(.+?)<<\/INVERSE>>/g, (s, colorString) => this._inverse(colorString))
-      .replace(/<<NOTIMPORTANT>> \!important/g, '');
+      .replace(/<<NOTIMPORTANT>> !important/g, '');
   }
 }
 
-window.GMusicTheme = GMusicTheme;
+module.exports = GMusicTheme;

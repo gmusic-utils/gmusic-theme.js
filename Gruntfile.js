@@ -19,6 +19,9 @@ module.exports = (grunt) => {
         },
         options: {
           transform: ['brfs'],
+          browserifyOptions: {
+            standalone: 'GMusicTheme',
+          },
         },
       },
     },

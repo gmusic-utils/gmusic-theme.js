@@ -1,11 +1,16 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.GMusicTheme = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _color = require('color');
+
+var _color2 = _interopRequireDefault(_color);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var color = require('color');
 
 
 // DEV: These constants will be transformed into string constants by browserify
@@ -146,12 +151,10 @@ var GMusicTheme = function () {
             tmpSVG.setAttribute('current-custom', this.FORE_SECONDARY);
             parent.appendChild(tmpSVG);
           }
-        } else {
+        } else if (logo.nodeName === 'IMG' || logo.id === 'customSVGIcon') {
           // DEV: Only update the SVG element if we need to
-          if (logo.nodeName === 'IMG' || logo.id === 'customSVGIcon') {
-            parent.removeChild(logo);
-            parent.appendChild(new DOMParser().parseFromString(normalSVG, 'text/xml').firstChild);
-          }
+          parent.removeChild(logo);
+          parent.appendChild(new DOMParser().parseFromString(normalSVG, 'text/xml').firstChild);
         }
 
         // DEV: Google sometimes changes its logo by itself, we need to monitor this
@@ -183,31 +186,31 @@ var GMusicTheme = function () {
         default:
           break;
       }
-      this.styleElement.innerHTML = this._substituteColors(styles);
+      this.styleElement.innerHTML = this.substituteColors(styles);
     }
   }, {
     key: '_rgba',
     value: function _rgba(colorCode, opacity) {
-      return color(colorCode).clearer(opacity).rgbString();
+      return (0, _color2.default)(colorCode).clearer(opacity).rgbString();
     }
   }, {
     key: '_darken',
     value: function _darken(colorCode, percentage) {
-      return color(colorCode).darken(percentage).rgbString();
+      return (0, _color2.default)(colorCode).darken(percentage).rgbString();
     }
   }, {
     key: '_inverse',
     value: function _inverse(colorCode) {
-      var rgb = color(colorCode).rgb();
-      return color({
+      var rgb = (0, _color2.default)(colorCode).rgb();
+      return (0, _color2.default)({
         r: 255 - rgb.r,
         g: 255 - rgb.g,
         b: 255 - rgb.b
       }).rgbString();
     }
   }, {
-    key: '_substituteColors',
-    value: function _substituteColors(styleString) {
+    key: 'substituteColors',
+    value: function substituteColors(styleString) {
       var _this2 = this;
 
       return styleString.replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY).replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY).replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT).replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY).replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY).replace(/<<DARKEN ([01]+.?[0-9]*)>>(.+?)<<\/DARKEN>>/g, function (s, n, colorString) {
@@ -216,7 +219,7 @@ var GMusicTheme = function () {
         return _this2._rgba(colorString, parseFloat(n));
       }).replace(/<<INVERSE>>(.+?)<<\/INVERSE>>/g, function (s, colorString) {
         return _this2._inverse(colorString);
-      }).replace(/<<NOTIMPORTANT>> \!important/g, '');
+      }).replace(/<<NOTIMPORTANT>> !important/g, '');
     }
   }]);
 
@@ -229,7 +232,7 @@ GMusicTheme.TYPES = {
 };
 
 
-window.GMusicTheme = GMusicTheme;
+module.exports = GMusicTheme;
 
 
 },{"../lib/_constants":2,"color":7}],2:[function(require,module,exports){
@@ -1853,4 +1856,5 @@ Color.prototype.setChannel = function (space, index, val) {
 
 module.exports = Color;
 
-},{"color-convert":4,"color-string":6}]},{},[1]);
+},{"color-convert":4,"color-string":6}]},{},[1])(1)
+});
