@@ -148,6 +148,8 @@ body {
 .material-detail-view .has-hero-image,
 .song-row td,
 .song-row td > *,
+.song-row.currently-playing td,
+.song-row.currently-playing td > *,
 .upload-progress-row td,
 .song-row.selected-song-row td {
   background-color: <<BACK_PRIMARY>>;
