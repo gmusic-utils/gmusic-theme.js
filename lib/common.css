@@ -204,6 +204,5 @@ button.goog-buttonset-default:hover {
 }
 
 .material .sj-play-button-0 #pulse.sj-play-button {
-    background: <<FORE_SECONDARY>>;
-    opacity: .3;
+    background: <<ALPHA 0.3>><<FORE_SECONDARY>><<ALPHA>>;
 }
