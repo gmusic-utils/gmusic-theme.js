@@ -197,3 +197,12 @@ button.goog-buttonset-default:hover {
   color: <<FORE_SECONDARY>>;
 }
 /** Update End **/
+
+/** Fixes Playlist button **/
+.material .sj-play-button-0 #buttonContent.sj-play-button {
+    background: <<FORE_SECONDARY>>;
+}
+
+.material .sj-play-button-0 #pulse.sj-play-button {
+    background: <<ALPHA 0.5>><<FORE_SECONDARY>><<ALPHA>>;
+}
