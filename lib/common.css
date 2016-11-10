@@ -206,3 +206,7 @@ button.goog-buttonset-default:hover {
 .material .sj-play-button-0 #pulse.sj-play-button {
     background: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>>;
 }
+/**Text Highlighing **/
+paper-dialog input::selection, paper-dialog textarea::selection {
+	background:<<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>>;
+}
