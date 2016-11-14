@@ -450,6 +450,48 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 }
 /** Update End **/
 
+/** 15/11/2016 Update **/
+#mainContainer {
+  background: <<BACK_PRIMARY>>;
+}
+
+.sj-scrolling-module-0 {
+  background: <<BACK_PRIMARY>>;
+}
+
+.sj-scrolling-module-0 h2 {
+  color: white;
+}
+
+paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar {
+  border-bottom: 1px solid <<BACK_HIGHLIGHT>>;
+}
+
+#nav-container {
+  border-right: 1px solid <<BACK_HIGHLIGHT>>;
+}
+
+.sj-card-0[card-aspect-ratio="wide"] {
+  background-color: <<BACK_SECONDARY>>;
+}
+
+.sj-card-0  .card-description, .sj-card-0  .card-subtitle {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid svg {
+  fill: white;
+}
+
+.gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid {
+  background-color: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>>;
+}
+
+.sj-scrolling-module-0  .module-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {

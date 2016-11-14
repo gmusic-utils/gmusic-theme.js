@@ -206,3 +206,26 @@ button.goog-buttonset-default:hover {
 .material .sj-play-button-0 #pulse.sj-play-button {
     background: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>>;
 }
+/** End **/
+
+/** 15/11/2016 Update **/
+.sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.sj-page-indicator-0 .sj-page-tab.sj-page-indicator.iron-selected svg {
+  fill: <<FORE_SECONDARY>>;
+}
+
+.paper-fab-0 {
+  background: <<FORE_SECONDARY>>;
+}
+
+.sj-scrolling-module-0:not(:first-child) {
+  padding-top: 48px;
+}
+
+body.qp #material-app-bar #material-one-left .music-logo {
+  background-image: none;
+}
+/** Update End **/
