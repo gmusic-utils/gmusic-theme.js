@@ -42,6 +42,8 @@
  padding-top: 0;
 }
 
+.goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope),
+.goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope):hover,
 .goog-menu .goog-menuitem.selected .goog-menuitem-content,
 .goog-menu .goog-menuitem.selected .goog-menuitem-content:hover {
  color: <<FORE_SECONDARY>>;
@@ -227,5 +229,9 @@ button.goog-buttonset-default:hover {
 
 body.qp #material-app-bar #material-one-left .music-logo {
   background-image: none;
+}
+
+.paper-tabs-0 #selectionBar.paper-tabs {
+  background-color: <<FORE_SECONDARY>>;
 }
 /** Update End **/

@@ -44,6 +44,8 @@ class GMusicTheme {
     this.styleElement = document.createElement('style');
     document.body.appendChild(this.styleElement);
 
+    this._injectBackgroundOverlay();
+
     // DEV: updateTheme calls redrawTheme
     this.updateTheme(options);
   }
@@ -143,6 +145,15 @@ class GMusicTheme {
       // DEV: If the logo isn't ready yet wait a few milliseconds and try again
       setTimeout(this._drawLogo, 10);
     }
+  }
+
+  _injectBackgroundOverlay() {
+    const container = document.querySelector('#backgroundContainer');
+    if (!container) return setTimeout(() => this._injectBackgroundOverlay(), 50);
+    const overlay = document.createElement('div');
+    overlay.id = 'themeOverlay';
+    container.appendChild(overlay);
+    return null;
   }
 
   _refreshStyleSheet() {

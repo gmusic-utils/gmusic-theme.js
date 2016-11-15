@@ -42,7 +42,7 @@ sj-search-suggestion #queryText.sj-search-suggestion .sub-match.sj-search-sugges
 }
 
 body {
-  background-color: <<BACK_SECONDARY>>;
+  background-color: <<BACK_HIGHLIGHT>>;
 }
 
 #drawer, .material-card {
@@ -231,7 +231,10 @@ body,
   background-color: <<BACK_PRIMARY>>;
 }
 
-.nav-section-divider {
+.nav-section-divider,
+#playlist-drawer .autoplaylist-section,
+#playlist-drawer #recent-playlists-container,
+#playlist-drawer paper-header-panel[at-top] paper-toolbar:not([style-scope]):not(.style-scope) {
   border-bottom: 1px solid <<BACK_HIGHLIGHT>>;
 }
 
@@ -451,14 +454,6 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 /** Update End **/
 
 /** 15/11/2016 Update **/
-#mainContainer {
-  background: <<BACK_PRIMARY>>;
-}
-
-.sj-scrolling-module-0 {
-  background: <<BACK_PRIMARY>>;
-}
-
 .sj-scrolling-module-0 h2 {
   color: white;
 }
@@ -489,6 +484,29 @@ paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.t
 
 .sj-scrolling-module-0  .module-subtitle {
   color: rgba(255, 255, 255, 0.7);
+}
+
+sj-home[selected="0"] #themeOverlay, sj-home[selected="1"] #themeOverlay {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+
+sj-home #themeOverlay {
+  background: <<ALPHA 0.3>><<BACK_HIGHLIGHT>><</ALPHA>>;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#playlist-drawer-button:after, #left-nav-open-button:after, #left-nav-close-button:after {
+  -webkit-filter: invert(1);
+}
+
+.paper-toolbar-0, .gpm-card-grid-3  #gridTitle {
+  color: #efefef;
 }
 /** Update End **/
 
