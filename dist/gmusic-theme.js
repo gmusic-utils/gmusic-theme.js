@@ -186,6 +186,7 @@ var GMusicTheme = function () {
       var wait = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
       clearTimeout(this._injectTimer);
+      if (document.querySelector('#themeOverlay')) return;
       var container = document.querySelector('#backgroundContainer');
       if (!container) {
         if (wait) this._injectTimer = setTimeout(function () {

@@ -152,6 +152,7 @@ class GMusicTheme {
 
   _injectBackgroundOverlay(wait = false) {
     clearTimeout(this._injectTimer);
+    if (document.querySelector('#themeOverlay')) return;
     const container = document.querySelector('#backgroundContainer');
     if (!container) {
       if (wait) this._injectTimer = setTimeout(() => this._injectBackgroundOverlay(wait), 50);
