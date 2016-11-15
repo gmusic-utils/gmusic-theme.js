@@ -23,10 +23,9 @@ var CONSTANTS = require('../lib/_constants');
 var DEFAULTS = {
   BACK_PRIMARY: '#222326',
   BACK_SECONDARY: '#121314',
-  BACK_HIGHLIGHT: '#1a1b1d', // #1a1b1d // 615F59
+  BACK_HIGHLIGHT: '#615F59', // #1a1b1d
   FORE_PRIMARY: '#FFFFFF',
-  // FORE_SECONDARY: '#FF5722',
-  FORE_SECONDARY: 'rgb(244, 67, 54)'
+  FORE_SECONDARY: '#FF5722'
 };
 
 var GMusicTheme = function () {
