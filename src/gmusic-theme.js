@@ -46,6 +46,7 @@ class GMusicTheme {
 
     this._injectBackgroundOverlay(true);
     window.addEventListener('hashchange', () => {
+      if (this._injectTimer) return;
       this._injectBackgroundOverlay();
     });
 
@@ -151,7 +152,7 @@ class GMusicTheme {
   }
 
   _injectBackgroundOverlay(wait = false) {
-    clearTimeout(this._injectTimer);
+    this._injectTimer = clearTimeout(this._injectTimer);
     if (document.querySelector('#themeOverlay')) return;
     const container = document.querySelector('#backgroundContainer');
     if (!container) {
