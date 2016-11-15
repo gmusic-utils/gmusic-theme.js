@@ -508,6 +508,10 @@ sj-home #themeOverlay {
 .paper-toolbar-0, .gpm-card-grid-3  #gridTitle {
   color: #efefef;
 }
+
+.sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
 /** Update End **/
 
 /** Scrollbar Theming **/
