@@ -44,7 +44,10 @@ class GMusicTheme {
     this.styleElement = document.createElement('style');
     document.body.appendChild(this.styleElement);
 
-    this._injectBackgroundOverlay();
+    this._injectBackgroundOverlay(true);
+    window.addEventListener('hashchange', () => {
+      this._injectBackgroundOverlay();
+    });
 
     // DEV: updateTheme calls redrawTheme
     this.updateTheme(options);
@@ -147,13 +150,16 @@ class GMusicTheme {
     }
   }
 
-  _injectBackgroundOverlay() {
+  _injectBackgroundOverlay(wait = false) {
+    clearTimeout(this._injectTimer);
     const container = document.querySelector('#backgroundContainer');
-    if (!container) return setTimeout(() => this._injectBackgroundOverlay(), 50);
+    if (!container) {
+      if (wait) this._injectTimer = setTimeout(() => this._injectBackgroundOverlay(wait), 50);
+      return;
+    }
     const overlay = document.createElement('div');
     overlay.id = 'themeOverlay';
     container.appendChild(overlay);
-    return null;
   }
 
   _refreshStyleSheet() {

@@ -39,6 +39,8 @@ var GMusicTheme = function () {
    */
 
   function GMusicTheme() {
+    var _this = this;
+
     var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
     _classCallCheck(this, GMusicTheme);
@@ -56,7 +58,10 @@ var GMusicTheme = function () {
     this.styleElement = document.createElement('style');
     document.body.appendChild(this.styleElement);
 
-    this._injectBackgroundOverlay();
+    this._injectBackgroundOverlay(true);
+    window.addEventListener('hashchange', function () {
+      _this._injectBackgroundOverlay();
+    });
 
     // DEV: updateTheme calls redrawTheme
     this.updateTheme(options);
@@ -130,7 +135,7 @@ var GMusicTheme = function () {
   }, {
     key: '_drawLogo',
     value: function _drawLogo() {
-      var _this = this;
+      var _this2 = this;
 
       var logo = document.querySelectorAll('.menu-logo')[0];
       var normalSVG = BASE_SVG;
@@ -161,7 +166,7 @@ var GMusicTheme = function () {
 
         // DEV: Google sometimes changes its logo by itself, we need to monitor this
         this.logoObserver = new MutationObserver(function () {
-          _this._drawLogo();
+          _this2._drawLogo();
         });
         this.logoObserver.observe(parent, {
           childList: true,
@@ -176,16 +181,21 @@ var GMusicTheme = function () {
   }, {
     key: '_injectBackgroundOverlay',
     value: function _injectBackgroundOverlay() {
-      var _this2 = this;
+      var _this3 = this;
 
+      var wait = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+
+      clearTimeout(this._injectTimer);
       var container = document.querySelector('#backgroundContainer');
-      if (!container) return setTimeout(function () {
-        return _this2._injectBackgroundOverlay();
-      }, 50);
+      if (!container) {
+        if (wait) this._injectTimer = setTimeout(function () {
+          return _this3._injectBackgroundOverlay(wait);
+        }, 50);
+        return;
+      }
       var overlay = document.createElement('div');
       overlay.id = 'themeOverlay';
       container.appendChild(overlay);
-      return null;
     }
   }, {
     key: '_refreshStyleSheet',
@@ -227,14 +237,14 @@ var GMusicTheme = function () {
   }, {
     key: 'substituteColors',
     value: function substituteColors(styleString) {
-      var _this3 = this;
+      var _this4 = this;
 
       return styleString.replace(/<<BACK_PRIMARY>>/g, this.BACK_PRIMARY).replace(/<<BACK_SECONDARY>>/g, this.BACK_SECONDARY).replace(/<<BACK_HIGHLIGHT>>/g, this.BACK_HIGHLIGHT).replace(/<<FORE_PRIMARY>>/g, this.FORE_PRIMARY).replace(/<<FORE_SECONDARY>>/g, this.FORE_SECONDARY).replace(/<<DARKEN ([01]+.?[0-9]*)>>(.+?)<<\/DARKEN>>/g, function (s, n, colorString) {
-        return _this3._darken(colorString, parseFloat(n));
+        return _this4._darken(colorString, parseFloat(n));
       }).replace(/<<ALPHA ([01]+.?[0-9]*)>>(.+?)<<\/ALPHA>>/g, function (s, n, colorString) {
-        return _this3._rgba(colorString, parseFloat(n));
+        return _this4._rgba(colorString, parseFloat(n));
       }).replace(/<<INVERSE>>(.+?)<<\/INVERSE>>/g, function (s, colorString) {
-        return _this3._inverse(colorString);
+        return _this4._inverse(colorString);
       }).replace(/<<NOTIMPORTANT>> !important/g, '');
     }
   }]);
