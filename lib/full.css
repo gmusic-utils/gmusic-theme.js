@@ -514,6 +514,14 @@ sj-home #themeOverlay {
 }
 /** Update End **/
 
+/** 19/02/2017 Update **/
+.sj-card-0 #details.sj-card > [slot="title"],
+.sj-card-0 #details.sj-card > [slot="subtitle"],
+.sj-card-0 #details.sj-card > [slot="description"] {
+  color: #efefef;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {

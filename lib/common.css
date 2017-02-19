@@ -235,3 +235,10 @@ body.qp #material-app-bar #material-one-left .music-logo {
   background-color: <<FORE_SECONDARY>>;
 }
 /** Update End **/
+
+/** 17/02/2017 Update **/
+paper-dialog input::selection,
+paper-dialog textarea::selection {
+  background: <<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>>;
+}
+/** Update End **/
