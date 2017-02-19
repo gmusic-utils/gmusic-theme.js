@@ -520,6 +520,31 @@ sj-home #themeOverlay {
 .sj-card-0 #details.sj-card > [slot="description"] {
   color: #efefef;
 }
+
+.paper-dialog-scrollable-0.is-scrolled:not(:first-child)::before,
+paper-dialog-scrollable.can-scroll:not([style-scope]):not(.style-scope):not(.scrolled-to-bottom)::after {
+  background: <<BACK_PRIMARY>>;
+}
+
+.shortcuts-dialog tr:first-child {
+  border-top: 1px solid <<BACK_PRIMARY>>;
+}
+
+.shortcuts-dialog tr {
+  border-bottom: 1px solid <<BACK_PRIMARY>>;
+}
+
+.shortcuts-dialog caption {
+  color: <<FORE_PRIMARY>>;
+}
+
+.shortcuts-dialog td {
+  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>>
+}
+
+.shortcuts-dialog td:nth-child(2) {
+  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>>
+}
 /** Update End **/
 
 /** Scrollbar Theming **/
