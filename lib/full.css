@@ -50,10 +50,13 @@ body {
 }
 
 #nav-container,
-#loading-overlay,
 #loading-progress,
 #loading-progress-bar {
   background: <<BACK_PRIMARY>>;
+}
+
+#loading-overlay {
+  background: <<ALPHA 0.7>><<BACK_PRIMARY>><</ALPHA>>;
 }
 
 #loading-progress-bar {
@@ -322,7 +325,7 @@ paper-checkbox #checkboxLabel {
   color: <<FORE_PRIMARY>>;
 }
 
-a,
+a:not(.gpm-now-card-grid),
 .simple-dialog a {
   color: <<FORE_PRIMARY>>;
 }
@@ -486,11 +489,14 @@ paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.t
   color: rgba(255, 255, 255, 0.7);
 }
 
-sj-home[selected="0"] #themeOverlay, sj-home[selected="1"] #themeOverlay {
+sj-home[selected="0"] #backgroundColor::after,
+sj-home[selected="1"] #backgroundColor::after {
   background-color: <<BACK_HIGHLIGHT>>;
 }
 
-sj-home #themeOverlay {
+sj-home #backgroundColor::after {
+  content: '';
+  display: block;
   background: <<ALPHA 0.3>><<BACK_HIGHLIGHT>><</ALPHA>>;
   position: absolute;
   top: 0;

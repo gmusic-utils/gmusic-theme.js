@@ -72,7 +72,8 @@
 }
 
 #loading-overlay.material paper-spinner .circle,
-#loading-overlay.material paper-spinner-lite .circle {
+#loading-overlay.material paper-spinner-lite .circle,
+.paper-spinner-lite-1 .spinner-layer.paper-spinner-lite {
  border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>>;
 }
 
