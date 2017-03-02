@@ -553,6 +553,16 @@ paper-dialog-scrollable.can-scroll:not([style-scope]):not(.style-scope):not(.scr
 }
 /** Update End **/
 
+/** 02/03/2017 Update **/
+.button-bar {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+
+.nuq-view button.quiz-block .name {
+  color: <<FORE_PRIMARY>>;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
