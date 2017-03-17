@@ -563,6 +563,34 @@ paper-dialog-scrollable.can-scroll:not([style-scope]):not(.style-scope):not(.scr
 }
 /** Update End **/
 
+/** 17/04/2017 Update **/
+sj-entity-suggestion:hover,
+sj-entity-suggestion.query-selected {
+  background-color: <<BACK_SECONDARY>>;
+}
+
+sj-entity-suggestion #buttonContent {
+  background-color: <<BACK_PRIMARY>>;
+}
+
+sj-entity-suggestion #buttonContent svg {
+  fill: <<FORE_PRIMARY>>;
+}
+
+sj-entity-suggestion #title.sj-entity-suggestion {
+  color: <<FORE_PRIMARY>>;
+}
+
+sj-entity-suggestion #subtitle.sj-entity-suggestion {
+  color: <<DARKEN 0.5>><<FORE_PRIMARY>><</DARKEN>>
+}
+
+sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
+  border-bottom-color: <<BACK_PRIMARY>>;
+  box-shadow: 0px 1px 0px 0px #666;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
