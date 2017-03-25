@@ -22,10 +22,10 @@ body,
   background-size: 40px 40px;
 }
 input.material-search.label-input-label::-webkit-input-placeholder {
-    color: #212121 !important;
+    color: #212121;
 }
 .qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
-	background-color: rgba(255,255,255,0.16) !important;
+	background-color: rgba(255,255,255,0.16);
 	color: #212121
 }
 paper-header-panel#content-container.transparent #material-app-bar #material-one-middle .material-search::-webkit-input-placeholder {
