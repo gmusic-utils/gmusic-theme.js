@@ -624,3 +624,10 @@ sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
 ::shadow ::-webkit-scrollbar-thumb:active {
   background-color: rgba(255, 255, 255, 0.125);
 }
+.qp #material-one-middle .material-search::-webkit-input-placeholder{
+  color:<<FORE_PRIMARY>>;
+}
+.qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
+  background-color: rgba(255,255,255,0.16);
+  color:<<FORE_PRIMARY>>;
+}
