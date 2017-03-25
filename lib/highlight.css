@@ -24,3 +24,7 @@ body,
 input.material-search.label-input-label::-webkit-input-placeholder {
     color: #212121 !important;
 }
+.qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
+	background-color: rgba(255,255,255,0.16) !important;
+	color: #212121
+}
