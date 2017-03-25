@@ -25,7 +25,7 @@ input.material-search.label-input-label::-webkit-input-placeholder {
     color: #212121;
 }
 .qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
-	background-color: rgba(255,255,255,0.16);
+	background-color: <<ALPHA 0.84>><<FORE_PRIMARY>><</ALPHA>>;
 	color: #212121;
 }
 paper-header-panel#content-container.transparent #material-app-bar #material-one-middle .material-search::-webkit-input-placeholder {
