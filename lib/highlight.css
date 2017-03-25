@@ -28,3 +28,6 @@ input.material-search.label-input-label::-webkit-input-placeholder {
 	background-color: rgba(255,255,255,0.16) !important;
 	color: #212121
 }
+paper-header-panel#content-container.transparent #material-app-bar #material-one-middle .material-search::-webkit-input-placeholder {
+	color: <<FORE_PRIMARY>>
+}
