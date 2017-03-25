@@ -628,6 +628,6 @@ sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
   color:<<FORE_PRIMARY>>;
 }
 .qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
-  background-color: rgba(255,255,255,0.16);
+  background-color: <<ALPHA 0.84>><<FORE_PRIMARY>><</ALPHA>>;
   color:<<FORE_PRIMARY>>;
 }
