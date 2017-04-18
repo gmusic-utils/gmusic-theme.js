@@ -1,7 +1,7 @@
 {
   "name": "gmusic-theme.js",
   "description": "Browser-side JS library for theming Google Music",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "homepage": "https://github.com/gmusic-utils/gmusic-theme.js#readme",
   "author": {
     "name": "Samuel Attard",
