@@ -591,6 +591,16 @@ sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
 }
 /** Update End **/
 
+/** 19/04/2017 Update **/
+gpm-detail-page-header .gpm-detail-page-header > * {
+  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>>;
+}
+
+gpm-detail-page-header[description-overflows] #descriptionWrapper.gpm-detail-page-header:hover {
+  background: <<DARKEN 0.7>><<FORE_PRIMARY>><</DARKEN>>;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {

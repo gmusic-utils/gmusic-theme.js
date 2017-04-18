@@ -248,3 +248,9 @@ paper-dialog textarea::selection {
   background: <<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>>;
 }
 /** Update End **/
+
+/** 19/04/2017 Update **/
+gpm-detail-page-header #playButton #buttonContent {
+  background: <<FORE_SECONDARY>>;
+}
+/** Update End **/
