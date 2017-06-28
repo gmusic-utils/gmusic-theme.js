@@ -111,8 +111,8 @@ paper-toggle-button[checked] .toggle-ink {
  color: <<FORE_SECONDARY>>;
 }
 
-.paper-slider-0 #sliderKnobInner.paper-slider,
-#sliderKnobInner.paper-slider,
+paper-slider .slider-knob-inner.paper-slider,
+.slider-knob-inner.paper-slider,
 .paper-progress-0 #primaryProgress.paper-progress {
  background-color: <<FORE_SECONDARY>>;
  border-color: <<FORE_SECONDARY>>;
