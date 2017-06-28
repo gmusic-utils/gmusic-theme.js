@@ -601,6 +601,35 @@ gpm-detail-page-header[description-overflows] #descriptionWrapper.gpm-detail-pag
 }
 /** Update End **/
 
+/** Update 28/06/2017 **/
+.top-tracks {
+  background-color: <<BACK_PRIMARY>>;
+}
+.more-songs-container {
+  border-top-color: <<BACK_PRIMARY>>;
+}
+gpm-vertical-list #items.gpm-vertical-list {
+  background-color: <<BACK_PRIMARY>>;
+}
+gpm-vertical-list #items.gpm-vertical-list > *:hover,
+gpm-vertical-list #items.gpm-vertical-list > *[focused] {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+paper-tabs #tabsContainer.paper-tabs {
+  color: <<FORE_PRIMARY>>;
+}
+gpm-card-grid > [slot="title"] {
+  color: <<FORE_PRIMARY>>;
+}
+#breadcrumbs-dropdown-button,
+#grouped-card-dropdown-button {
+  color: <<FORE_PRIMARY>>;
+}
+#playlist-drawer-button {
+  color: <<FORE_PRIMARY>>;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
