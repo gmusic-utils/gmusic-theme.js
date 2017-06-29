@@ -457,9 +457,10 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 /** Update End **/
 
 /** 15/11/2016 Update **/
-.sj-scrolling-module-0 h2,
-.sj-scrolling-module-0 h2 span {
-  color: white;
+sj-scrolling-module h2,
+sj-scrolling-module h2 span,
+sj-scrolling-module [slot="subtitle"] {
+  color: <<FORE_PRIMARY>>;
 }
 
 paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar {
