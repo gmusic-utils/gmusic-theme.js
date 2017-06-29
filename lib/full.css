@@ -457,7 +457,8 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 /** Update End **/
 
 /** 15/11/2016 Update **/
-.sj-scrolling-module-0 h2 {
+.sj-scrolling-module-0 h2,
+.sj-scrolling-module-0 h2 span {
   color: white;
 }
 
