@@ -458,7 +458,7 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 
 /** 15/11/2016 Update **/
 sj-scrolling-module h2,
-sj-scrolling-module h2 span,
+sj-scrolling-module h2 span.tooltip,
 sj-scrolling-module [slot="subtitle"] {
   color: <<FORE_PRIMARY>>;
 }
