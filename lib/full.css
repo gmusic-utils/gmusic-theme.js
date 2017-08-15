@@ -632,6 +632,16 @@ gpm-card-grid > [slot="title"] {
 }
 /** Update End **/
 
+/** Update 15/8/2017 **/
+#material-app-bar #countSummary {
+  color: <<FORE_PRIMARY>>;
+}
+
+#material-app-bar #action-bar-container {
+  color: <<FORE_PRIMARY>>;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
