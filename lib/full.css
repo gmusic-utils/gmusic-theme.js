@@ -675,3 +675,9 @@ gpm-card-grid > [slot="title"] {
 ::shadow ::-webkit-scrollbar-thumb:active {
   background-color: rgba(255, 255, 255, 0.125);
 }
+
+/* Fix loading spinner on playlist dot menu */
+.goog-menuheader .spinner {
+    background: <<BACK_PRIMARY>> url(ani_loading_white.gif) no-repeat center center;
+    background-size: 30px 30px;
+}
