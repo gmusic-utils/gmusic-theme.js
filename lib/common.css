@@ -131,7 +131,7 @@ paper-ripple#ink.paper-slider {
 }
 
 .paper-input-container-0 .focused-line.paper-input-container {
- background-color: <<FORE_SECONDARY>>;
+ border-bottom: 2px solid <<FORE_SECONDARY>>;
 }
 
 #player.material .material-player-middle paper-icon-button[data-id="repeat"][value="LIST_REPEAT"],
@@ -194,10 +194,6 @@ button.goog-buttonset-default:hover {
 #playlist-drawer sj-play-button {
   --sj-play-button-primary-color: <<FORE_SECONDARY>>;
   --sj-play-button-pulse-color: <<ALPHA 0.3>><<FORE_SECONDARY>><</ALPHA>>;
-}
-
-.focused-line.paper-input-container {
-  background-color: <<FORE_SECONDARY>>;
 }
 
 .input-content.label-is-floating.paper-input-container  label,
