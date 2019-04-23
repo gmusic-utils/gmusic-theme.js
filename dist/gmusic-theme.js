@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.GMusicTheme = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.GMusicTheme = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14,9 +14,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 // DEV: These constants will be transformed into string constants by browserify
-var COMMON_CSS = ".gmusic-theme #loading-progress-bar {\n  border: none !important;\n}\n\n.gmusic-theme #player.material paper-icon-button.playing > iron-icon::before {\n  content: '' !important;\n  display: block !important;\n  position: absolute !important;\n  z-index: -1 !important;\n  border-radius: 100% !important;\n  height: calc(100% - 16px) !important;\n  width: calc(100% - 16px) !important;\n  top: 8px !important;\n  left: 8px !important;\n}\n\n.gmusic-theme .cluster-text-protection::before,\n.gmusic-theme .cluster-text-protection {\n  background: transparent !important;\n}\n\n.gmusic-theme .nav-item-container:not(:focus):hover iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #nav_collections .nav-item-container:focus iron-icon,\n.gmusic-theme .nav-item-container:focus iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #nav_collections paper-button.upsell-button,\n.gmusic-theme #nav_collections paper-button.upsell-button:hover {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .fade-out:after {\n  display: none !important;\n}\n\n.gmusic-theme .column.col-0 .material-card:first-child .image-wrapper {\n  padding-top: 0 !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope),\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope):hover,\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content,\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:hover {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #primaryProgress.paper-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label,\n.gmusic-theme .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container .paper-input-label {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .add-on-content.is-highlighted.paper-input-container * {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material-container-details paper-fab,\n.gmusic-theme #current-loading-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"play-pause\"]:not([disabled]) {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #loading-overlay.material paper-spinner .circle,\n.gmusic-theme #loading-overlay.material paper-spinner-lite .circle,\n.gmusic-theme .paper-spinner-lite-1 .spinner-layer.paper-spinner-lite {\n  border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>> !important;\n}\n\n.gmusic-theme a.primary {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-button.material-primary {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #checkbox.checked {\n  border-color: <<FORE_SECONDARY>> !important;\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #ink {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-button {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-bar {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-ink {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-slider .slider-knob-inner.paper-slider,\n.gmusic-theme .slider-knob-inner.paper-slider,\n.gmusic-theme .paper-progress-0 #primaryProgress.paper-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n  border-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-ripple#ink.paper-slider {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .nav-item-container.selected iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-title {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .focused-line.paper-input-container {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"LIST_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"SINGLE_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"][value=\"ALL_SHUFFLE\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"LIST_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"SINGLE_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"][value=\"ALL_SHUFFLE\"] {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .cluster .lane-button core-icon,\n.gmusic-theme .cluster .lane-button iron-icon,\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"].active,\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"].active,\n.gmusic-theme #player.material #material-player-right-wrapper paper-icon-button[data-id=\"queue\"].opened {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme iron-icon[icon=\"av:explicit\"] {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material-detail-view .material-container-details .read-more-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .goog-buttonset-default {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog .buttons paper-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog .buttons paper-button[disabled] {\n  color: black !important;\n}\n\n.gmusic-theme button.goog-buttonset-default,\n.gmusic-theme button.goog-buttonset-default:hover {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .top-charts-view .song-row [data-col=\"index\"] .column-content,\n.gmusic-theme .material-card .details .left-items .index,\n.gmusic-theme .more-songs-container {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #music-content .info-card paper-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .primary {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer sj-play-button {\n  --sj-play-button-primary-color: <<FORE_SECONDARY>> !important;\n  --sj-play-button-pulse-color: <<ALPHA 0.3>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .focused-line.paper-input-container {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .input-content.label-is-floating.paper-input-container  label,\n.gmusic-theme .input-content.label-is-floating.paper-input-container  .paper-input-label {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material .sj-play-button-0 #buttonContent.sj-play-button {\n  background: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material .sj-play-button-0 #pulse.sj-play-button {\n  background: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {\n  fill: rgba(166, 166, 166, 0.7) !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator.iron-selected svg {\n  fill: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-fab-0 {\n  background: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .sj-scrolling-module-0:not(:first-child) {\n  padding-top: 48px !important;\n}\n\n.gmusic-theme body.qp #material-app-bar #material-one-left .music-logo {\n  background-image: none !important;\n}\n\n.gmusic-theme .paper-tabs-0 #selectionBar.paper-tabs {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog input::selection,\n.gmusic-theme paper-dialog textarea::selection {\n  background: <<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme gpm-detail-page-header #playButton #buttonContent {\n  background: <<FORE_SECONDARY>> !important;\n}";
+var COMMON_CSS = ".gmusic-theme #loading-progress-bar {\n  border: none !important;\n}\n\n.gmusic-theme #player.material paper-icon-button.playing > iron-icon::before {\n  content: '' !important;\n  display: block !important;\n  position: absolute !important;\n  z-index: -1 !important;\n  border-radius: 100% !important;\n  height: calc(100% - 16px) !important;\n  width: calc(100% - 16px) !important;\n  top: 8px !important;\n  left: 8px !important;\n}\n\n.gmusic-theme .cluster-text-protection::before,\n.gmusic-theme .cluster-text-protection {\n  background: transparent !important;\n}\n\n.gmusic-theme .nav-item-container:not(:focus):hover iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #nav_collections .nav-item-container:focus iron-icon,\n.gmusic-theme .nav-item-container:focus iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #nav_collections paper-button.upsell-button,\n.gmusic-theme #nav_collections paper-button.upsell-button:hover {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .fade-out:after {\n  display: none !important;\n}\n\n.gmusic-theme .column.col-0 .material-card:first-child .image-wrapper {\n  padding-top: 0 !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope),\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:not([style-scope]):not(.style-scope):hover,\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content,\n.gmusic-theme .goog-menu .goog-menuitem.selected .goog-menuitem-content:hover {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #primaryProgress.paper-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label,\n.gmusic-theme .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container .paper-input-label {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .add-on-content.is-highlighted.paper-input-container * {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material-container-details paper-fab,\n.gmusic-theme #current-loading-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"play-pause\"]:not([disabled]) {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #loading-overlay.material paper-spinner .circle,\n.gmusic-theme #loading-overlay.material paper-spinner-lite .circle,\n.gmusic-theme .paper-spinner-lite-1 .spinner-layer.paper-spinner-lite {\n  border-color: <<FORE_SECONDARY>><<NOTIMPORTANT>> !important;\n}\n\n.gmusic-theme a.primary {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-button.material-primary {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #checkbox.checked {\n  border-color: <<FORE_SECONDARY>> !important;\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #ink {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-button {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-bar {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-toggle-button[checked] .toggle-ink {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-slider .slider-knob-inner.paper-slider,\n.gmusic-theme .slider-knob-inner.paper-slider,\n.gmusic-theme .paper-progress-0 #primaryProgress.paper-progress {\n  background-color: <<FORE_SECONDARY>> !important;\n  border-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-ripple#ink.paper-slider {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .nav-item-container.selected iron-icon {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-title {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .focused-line.paper-input-container {\n  border-bottom: 2px solid <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"LIST_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"SINGLE_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"][value=\"ALL_SHUFFLE\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"LIST_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"][value=\"SINGLE_REPEAT\"],\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"][value=\"ALL_SHUFFLE\"] {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .cluster .lane-button core-icon,\n.gmusic-theme .cluster .lane-button iron-icon,\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"repeat\"].active,\n.gmusic-theme #player.material .material-player-middle paper-icon-button[data-id=\"shuffle\"].active,\n.gmusic-theme #player.material #material-player-right-wrapper paper-icon-button[data-id=\"queue\"].opened {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme iron-icon[icon=\"av:explicit\"] {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material-detail-view .material-container-details .read-more-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .goog-buttonset-default {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog .buttons paper-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog .buttons paper-button[disabled] {\n  color: black !important;\n}\n\n.gmusic-theme button.goog-buttonset-default,\n.gmusic-theme button.goog-buttonset-default:hover {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .top-charts-view .song-row [data-col=\"index\"] .column-content,\n.gmusic-theme .material-card .details .left-items .index,\n.gmusic-theme .more-songs-container {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #music-content .info-card paper-button {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .primary {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer sj-play-button {\n  --sj-play-button-primary-color: <<FORE_SECONDARY>> !important;\n  --sj-play-button-pulse-color: <<ALPHA 0.3>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .input-content.label-is-floating.paper-input-container  label,\n.gmusic-theme .input-content.label-is-floating.paper-input-container  .paper-input-label {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material .sj-play-button-0 #buttonContent.sj-play-button {\n  background: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .material .sj-play-button-0 #pulse.sj-play-button {\n  background: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {\n  fill: rgba(166, 166, 166, 0.7) !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator.iron-selected svg {\n  fill: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .paper-fab-0 {\n  background: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .sj-scrolling-module-0:not(:first-child) {\n  padding-top: 48px !important;\n}\n\n.gmusic-theme body.qp #material-app-bar #material-one-left .music-logo {\n  background-image: none !important;\n}\n\n.gmusic-theme .paper-tabs-0 #selectionBar.paper-tabs {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-dialog input::selection,\n.gmusic-theme paper-dialog textarea::selection {\n  background: <<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme gpm-detail-page-header #playButton #buttonContent {\n  background: <<FORE_SECONDARY>> !important;\n}";
 var HIGHLIGHT_CSS = ".gmusic-theme #material-app-bar {\n  background-color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .nav-item-container.selected {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme body,\n.gmusic-theme .material-detail-view .material-container-details .info .description,\n.gmusic-theme .song-table th {\n  color: #212121 !important;\n}\n\n.gmusic-theme .song-row .song-indicator {\n  background-image: url('ani_equalizer_black.gif') !important;\n  background-size: 40px 40px !important;\n}";
-var FULL_CSS = ".gmusic-theme #material-app-bar {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme #material-app-bar .tab-text,\n.gmusic-theme [data-id=\"prev-history\"],\n.gmusic-theme [data-id=\"next-history\"],\n.gmusic-theme #searchIcon {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box,\n.gmusic-theme sj-search-box[opened],\n.gmusic-theme sj-search-box[has-query] {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box #input.sj-search-box {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box[opened]:not([num-suggestions=\"0\"]) #input.sj-search-box {\n  border-bottom-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-search-suggestion:hover,\n.gmusic-theme sj-search-suggestion.query-selected {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-search-suggestion #queryText.sj-search-suggestion .sub-match.sj-search-suggestion {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-one-left #left-nav-open-button svg {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme body {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme #drawer,\n.gmusic-theme .material-card {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #nav-container,\n.gmusic-theme #loading-progress,\n.gmusic-theme #loading-progress-bar {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #loading-overlay {\n  background: <<ALPHA 0.7>><<BACK_PRIMARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme #loading-progress-bar {\n  border: none !important;\n}\n\n.gmusic-theme .nav-toolbar,\n.gmusic-theme .material-card .details,\n.gmusic-theme .material-card .image-wrapper,\n.gmusic-theme .situations-filter {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #nav {\n  background: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #player,\n.gmusic-theme .player-rating-container,\n.gmusic-theme #player.material .now-playing-actions paper-icon-button {\n  color: <<FORE_PRIMARY>> !important;\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #player.material paper-icon-button.playing > iron-icon::before {\n  content: '' !important;\n  display: block !important;\n  position: absolute !important;\n  background: <<FORE_PRIMARY>> !important;\n  z-index: -1 !important;\n  border-radius: 100% !important;\n  height: calc(100% - 16px) !important;\n  width: calc(100% - 16px) !important;\n  top: 8px !important;\n  left: 8px !important;\n}\n\n.gmusic-theme #player.material:hover #material-player-progress #sliderContainer:not(.disabled) #sliderBar #progressContainer,\n.gmusic-theme .playlist-view .editable:hover {\n  background: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .cluster-text-protection::before,\n.gmusic-theme .cluster-text-protection {\n  background: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .title,\n.gmusic-theme .situation-title,\n.gmusic-theme .recommended-header {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-item-container {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-item-container .owner-name {\n  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme #nav_collections .nav-item-container:focus,\n.gmusic-theme .nav-item-container:focus,\n.gmusic-theme .nav-item-container:hover,\n.gmusic-theme .nav-item-container.selected {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .fade-out:after {\n  display: none !important;\n}\n\n.gmusic-theme .column.col-0 .material-card:first-child .image-wrapper {\n  padding-top: 0 !important;\n}\n\n.gmusic-theme .song-row .song-indicator {\n  background-image: url('ani_equalizer_white_x2.gif') !important;\n  background-size: 28px 28px !important;\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover .song-indicator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .has-hero-image,\n.gmusic-theme .song-row td,\n.gmusic-theme .song-row td > *,\n.gmusic-theme .song-row.currently-playing td,\n.gmusic-theme .song-row.currently-playing td > *,\n.gmusic-theme .upload-progress-row td,\n.gmusic-theme .song-row.selected-song-row td {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row.selected-song-row .song-indicator,\n.gmusic-theme .song-row.selected-song-row .title-right-items,\n.gmusic-theme .song-row.selected-song-row .content,\n.gmusic-theme .song-row.selected-song-row .song-indicator[data-playback-status=\"paused\"],\n.gmusic-theme .song-row.selected-song-row .song-indicator[data-playback-status=\"loading\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"index\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"track\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.selected-song-row td,\n.gmusic-theme .song-row.selected-song-row td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row:hover,\n.gmusic-theme .song-row.hover .song-indicator,\n.gmusic-theme .song-row.hover .title-right-items,\n.gmusic-theme .song-row.hover .content,\n.gmusic-theme .song-row.hover .song-indicator[data-playback-status=\"paused\"],\n.gmusic-theme .song-row.hover .song-indicator[data-playback-status=\"loading\"],\n.gmusic-theme .song-row.hover [data-col=\"index\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.hover [data-col=\"track\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.hover td,\n.gmusic-theme .song-row.hover td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row [data-col=\"radio\"],\n.gmusic-theme .song-row [data-col=\"radio\"] svg,\n.gmusic-theme .song-row.hover [data-col=\"radio\"],\n.gmusic-theme .song-row.hover [data-col=\"radio\"] svg,\n.gmusic-theme .song-row.selected-song-row [data-col=\"radio\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"radio\"] svg,\n.gmusic-theme  {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] {\n  -webkit-filter: invert(1) brightness(10) !important;\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] > ul {\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] > ul > li {\n  -webkit-filter: brightness(10) invert(1) !important;\n}\n\n.gmusic-theme body,\n.gmusic-theme .material-detail-view .material-container-details .info .description,\n.gmusic-theme .song-table th {\n  color: #efefef !important;\n}\n\n.gmusic-theme .song-row.hover [data-col=\"track\"] .hover-button[data-id=\"play\"] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row [data-col=\"index\"] .song-indicator {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"index\"] .song-indicator,\n.gmusic-theme .song-row.hover [data-col=\"index\"] .song-indicator,\n.gmusic-theme .song-row.selected-song-row [data-col=\"index\"] .song-indicator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row.selected-song-row.hover [data-col=\"index\"] .hover-button[data-id=\"play\"] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .songlist-container {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-section-divider,\n.gmusic-theme #playlist-drawer .autoplaylist-section,\n.gmusic-theme #playlist-drawer #recent-playlists-container,\n.gmusic-theme #playlist-drawer paper-header-panel[at-top] paper-toolbar:not([style-scope]):not(.style-scope) {\n  border-bottom: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .goog-menu,\n.gmusic-theme .now-playing-menu .goog-menuitem,\n.gmusic-theme .now-playing-menu .goog-submenu,\n.gmusic-theme .now-playing-menu .goog-submenu .goog-submenu-arrow,\n.gmusic-theme .goog-menuitem {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem .goog-menuitem-content,\n.gmusic-theme .goog-menuitem-highlight .goog-menuitem-content .goog-submenu-arrow,\n.gmusic-theme .goog-menuitem-highlight .goog-menuitem-content {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem:hover,\n.gmusic-theme .goog-menu .goog-menuseparator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .artist-details .bio-wrapper .bio,\n.gmusic-theme .material-card .details paper-icon-button.menu-anchor {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row.hover td a,\n.gmusic-theme .song-row.selected-song-row td a {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-action-dialog {\n  background: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .settings-card {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #queue-overlay {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #queue-overlay::after {\n  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) <<BACK_PRIMARY>> <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-content {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-description {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"index\"] .hover-button[data-id=\"play\"] {\n  background-color: <<INVERSE>><<BACK_HIGHLIGHT>><</INVERSE>> !important;\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .goog-menuheader {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container input,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container textarea,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container .paper-input-input,\n.gmusic-theme .material-share-options #sharing-option-label {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #loading-overlay.material[data-type=\"full-loading-overlay\"],\n.gmusic-theme #loading-overlay.material[data-type=\"regular-loading-overlay\"] {\n  background: <<ALPHA 0.5>><<BACK_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme iron-overlay-backdrop {\n  background: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #checkboxLabel {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme a:not(.gpm-now-card-grid),\n.gmusic-theme .simple-dialog a {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #topBar #material-one-right a {\n  /* Reset Color to GPM Default */\n  color: #666 !important;\n}\n\n.gmusic-theme .song-table [data-col=\"title\"],\n.gmusic-theme .song-table.mini [data-col=\"song-details\"] .song-title {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .subcategories-list,\n.gmusic-theme .material-detail-view .station-container-content-wrapper .material-container-details {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .material-list li a:hover,\n.gmusic-theme .material-list li a:focus {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .material-container-details .read-more-button:hover {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme paper-action-dialog paper-button,\n.gmusic-theme .share-buttons .share-button .button-label {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover td,\n.gmusic-theme .song-row:hover td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"track\"] .hover-button[data-id=\"play\"] {\n  background-color: <<INVERSE>><<BACK_HIGHLIGHT>><</INVERSE>> !important;\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .rating-container li {\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .cluster .header .cluster-title,\n.gmusic-theme .cluster .header .subtitle {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-dialog {\n  background: <<BACK_SECONDARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .simple-dialog {\n  background-color: <<BACK_PRIMARY>> !important;\n  border-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .simple-dialog,\n.gmusic-theme .simple-dialog > div,\n.gmusic-theme .edit-section > div.browseSubtext {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .material-detail-view .top-tracks {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #music-content .info-card {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button .playlist-subscribed,\n.gmusic-theme paper-button#unsubscribe-playlist-button:hover .playlist-unsubscribe {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:unsubscribe\"] path:last-child,\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:last-child {\n  stroke: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:first-child,\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:last-child {\n  fill: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .podcast-badge {\n  color: <<FORE_PRIMARY>> !important;\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .screensaver > canvas {\n  -webkit-filter: invert(1) brightness(0.4) !important;\n}\n\n.gmusic-theme #playlist-drawer paper-header-panel paper-toolbar {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer paper-header-panel playlist-drawer-header {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer .playlist-drawer-item .playlist-wrapper:hover,\n.gmusic-theme #playlist-drawer .playlist-drawer-item .playlist-wrapper:focus,\n.gmusic-theme #playlist-drawer .playlist-drawer-item sj-play-button:hover~.playlist-wrapper,\n.gmusic-theme #playlist-drawer .playlist-drawer-item iron-icon:hover~.playlist-wrapper,\n.gmusic-theme #playlist-drawer .playlist-drawer-item.playlist-drop-target:not(.subscribed) .playlist-wrapper {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .input-content.paper-input-container  input,\n.gmusic-theme .input-content.paper-input-container  textarea,\n.gmusic-theme .input-content.paper-input-container  iron-autogrow-textarea,\n.gmusic-theme .input-content.paper-input-container  .paper-input-input {\n  color: <<DARKEN 0.3>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme sj-scrolling-module h2,\n.gmusic-theme sj-scrolling-module h2 span.tooltip,\n.gmusic-theme sj-scrolling-module [slot=\"subtitle\"] {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar {\n  border-bottom: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme #nav-container {\n  border-right: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .sj-card-0[card-aspect-ratio=\"wide\"] {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .sj-card-0  .card-description,\n.gmusic-theme .sj-card-0  .card-subtitle {\n  color: rgba(255, 255, 255, 0.54) !important;\n}\n\n.gmusic-theme .gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid svg {\n  fill: white !important;\n}\n\n.gmusic-theme .gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid {\n  background-color: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .sj-scrolling-module-0  .module-subtitle {\n  color: rgba(255, 255, 255, 0.7) !important;\n}\n\n.gmusic-theme sj-home[selected=\"0\"] #backgroundColor::after,\n.gmusic-theme sj-home[selected=\"1\"] #backgroundColor::after {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-home #backgroundColor::after {\n  content: '' !important;\n  display: block !important;\n  background: <<ALPHA 0.3>><<BACK_HIGHLIGHT>><</ALPHA>> !important;\n  position: absolute !important;\n  top: 0 !important;\n  left: 0 !important;\n  right: 0 !important;\n  bottom: 0 !important;\n  z-index: 1 !important;\n  transition: background-color 0.3s ease-in-out !important;\n}\n\n.gmusic-theme #playlist-drawer-button:after,\n.gmusic-theme #left-nav-open-button:after,\n.gmusic-theme #left-nav-close-button:after {\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .paper-toolbar-0,\n.gmusic-theme .gpm-card-grid-3  #gridTitle {\n  color: #efefef !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {\n  fill: rgba(255, 255, 255, 0.7) !important;\n}\n\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"title\"],\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"subtitle\"],\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"description\"] {\n  color: #efefef !important;\n}\n\n.gmusic-theme .paper-dialog-scrollable-0.is-scrolled:not(:first-child)::before,\n.gmusic-theme paper-dialog-scrollable.can-scroll:not([style-scope]):not(.style-scope):not(.scrolled-to-bottom)::after {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog tr:first-child {\n  border-top: 1px solid <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog tr {\n  border-bottom: 1px solid <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog caption {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog td {\n  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog td:nth-child(2) {\n  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .button-bar {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .nuq-view button.quiz-block .name {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion:hover,\n.gmusic-theme sj-entity-suggestion.query-selected {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #buttonContent {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #buttonContent svg {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #title.sj-entity-suggestion {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #subtitle.sj-entity-suggestion {\n  color: <<DARKEN 0.5>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {\n  border-bottom-color: <<BACK_PRIMARY>> !important;\n  box-shadow: 0px 1px 0px 0px #666 !important;\n}\n\n.gmusic-theme gpm-detail-page-header .gpm-detail-page-header > * {\n  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme gpm-detail-page-header[description-overflows] #descriptionWrapper.gpm-detail-page-header:hover {\n  background: <<DARKEN 0.7>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .top-tracks {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .more-songs-container {\n  border-top-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list > *:hover,\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list > *[focused] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme paper-tabs #tabsContainer.paper-tabs {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-card-grid > [slot=\"title\"] {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #breadcrumbs-dropdown-button,\n.gmusic-theme #grouped-card-dropdown-button {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer-button {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-app-bar #countSummary {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-app-bar #action-bar-container {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar,\n.gmusic-theme ::shadow ::-webkit-scrollbar {\n  width: 9px !important;\n  background: transparent !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track {\n  background-color: rgba(255, 255, 255, 0.05) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track:hover,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track:hover {\n  background-color: rgba(255, 255, 255, 0.1) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track:active,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track:active {\n  background-color: rgba(255, 255, 255, 0.07) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb {\n  background-color: rgba(255, 255, 255, 0.1) !important;\n  border-radius: 0 !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb:hover,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb:hover {\n  background-color: rgba(255, 255, 255, 0.15) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb:active,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb:active {\n  background-color: rgba(255, 255, 255, 0.125) !important;\n}";
+var FULL_CSS = ".gmusic-theme #material-app-bar {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme #material-app-bar .tab-text,\n.gmusic-theme [data-id=\"prev-history\"],\n.gmusic-theme [data-id=\"next-history\"],\n.gmusic-theme #searchIcon {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box,\n.gmusic-theme sj-search-box[opened],\n.gmusic-theme sj-search-box[has-query] {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box #input.sj-search-box {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-search-box[opened]:not([num-suggestions=\"0\"]) #input.sj-search-box {\n  border-bottom-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-search-suggestion:hover,\n.gmusic-theme sj-search-suggestion.query-selected {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-search-suggestion #queryText.sj-search-suggestion .sub-match.sj-search-suggestion {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-one-left #left-nav-open-button svg {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme body {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme #drawer,\n.gmusic-theme .material-card {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #nav-container,\n.gmusic-theme #loading-progress,\n.gmusic-theme #loading-progress-bar {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #loading-overlay {\n  background: <<ALPHA 0.7>><<BACK_PRIMARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme #loading-progress-bar {\n  border: none !important;\n}\n\n.gmusic-theme .nav-toolbar,\n.gmusic-theme .material-card .details,\n.gmusic-theme .material-card .image-wrapper,\n.gmusic-theme .situations-filter {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #nav {\n  background: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #player,\n.gmusic-theme .player-rating-container,\n.gmusic-theme #player.material .now-playing-actions paper-icon-button {\n  color: <<FORE_PRIMARY>> !important;\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #player.material paper-icon-button.playing > iron-icon::before {\n  content: '' !important;\n  display: block !important;\n  position: absolute !important;\n  background: <<FORE_PRIMARY>> !important;\n  z-index: -1 !important;\n  border-radius: 100% !important;\n  height: calc(100% - 16px) !important;\n  width: calc(100% - 16px) !important;\n  top: 8px !important;\n  left: 8px !important;\n}\n\n.gmusic-theme #player.material:hover #material-player-progress #sliderContainer:not(.disabled) #sliderBar #progressContainer,\n.gmusic-theme .playlist-view .editable:hover {\n  background: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .cluster-text-protection::before,\n.gmusic-theme .cluster-text-protection {\n  background: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .title,\n.gmusic-theme .situation-title,\n.gmusic-theme .recommended-header {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-item-container {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-item-container .owner-name {\n  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme #nav_collections .nav-item-container:focus,\n.gmusic-theme .nav-item-container:focus,\n.gmusic-theme .nav-item-container:hover,\n.gmusic-theme .nav-item-container.selected {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .fade-out:after {\n  display: none !important;\n}\n\n.gmusic-theme .column.col-0 .material-card:first-child .image-wrapper {\n  padding-top: 0 !important;\n}\n\n.gmusic-theme .song-row .song-indicator {\n  background-image: url('ani_equalizer_white_x2.gif') !important;\n  background-size: 28px 28px !important;\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover .song-indicator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .has-hero-image,\n.gmusic-theme .song-row td,\n.gmusic-theme .song-row td > *,\n.gmusic-theme .song-row.currently-playing td,\n.gmusic-theme .song-row.currently-playing td > *,\n.gmusic-theme .upload-progress-row td,\n.gmusic-theme .song-row.selected-song-row td {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row.selected-song-row .song-indicator,\n.gmusic-theme .song-row.selected-song-row .title-right-items,\n.gmusic-theme .song-row.selected-song-row .content,\n.gmusic-theme .song-row.selected-song-row .song-indicator[data-playback-status=\"paused\"],\n.gmusic-theme .song-row.selected-song-row .song-indicator[data-playback-status=\"loading\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"index\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"track\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.selected-song-row td,\n.gmusic-theme .song-row.selected-song-row td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row:hover,\n.gmusic-theme .song-row.hover .song-indicator,\n.gmusic-theme .song-row.hover .title-right-items,\n.gmusic-theme .song-row.hover .content,\n.gmusic-theme .song-row.hover .song-indicator[data-playback-status=\"paused\"],\n.gmusic-theme .song-row.hover .song-indicator[data-playback-status=\"loading\"],\n.gmusic-theme .song-row.hover [data-col=\"index\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.hover [data-col=\"track\"] .hover-button[data-id=\"play\"],\n.gmusic-theme .song-row.hover td,\n.gmusic-theme .song-row.hover td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row [data-col=\"radio\"],\n.gmusic-theme .song-row [data-col=\"radio\"] svg,\n.gmusic-theme .song-row.hover [data-col=\"radio\"],\n.gmusic-theme .song-row.hover [data-col=\"radio\"] svg,\n.gmusic-theme .song-row.selected-song-row [data-col=\"radio\"],\n.gmusic-theme .song-row.selected-song-row [data-col=\"radio\"] svg,\n.gmusic-theme  {\n  color: <<FORE_SECONDARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] {\n  -webkit-filter: invert(1) brightness(10) !important;\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] > ul {\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"rating\"] > ul > li {\n  -webkit-filter: brightness(10) invert(1) !important;\n}\n\n.gmusic-theme body,\n.gmusic-theme .material-detail-view .material-container-details .info .description,\n.gmusic-theme .song-table th {\n  color: #efefef !important;\n}\n\n.gmusic-theme .song-row.hover [data-col=\"track\"] .hover-button[data-id=\"play\"] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row [data-col=\"index\"] .song-indicator {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"index\"] .song-indicator,\n.gmusic-theme .song-row.hover [data-col=\"index\"] .song-indicator,\n.gmusic-theme .song-row.selected-song-row [data-col=\"index\"] .song-indicator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row.selected-song-row.hover [data-col=\"index\"] .hover-button[data-id=\"play\"] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .songlist-container {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .nav-section-divider,\n.gmusic-theme #playlist-drawer .autoplaylist-section,\n.gmusic-theme #playlist-drawer #recent-playlists-container,\n.gmusic-theme #playlist-drawer paper-header-panel[at-top] paper-toolbar:not([style-scope]):not(.style-scope) {\n  border-bottom: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .goog-menu,\n.gmusic-theme .now-playing-menu .goog-menuitem,\n.gmusic-theme .now-playing-menu .goog-submenu,\n.gmusic-theme .now-playing-menu .goog-submenu .goog-submenu-arrow,\n.gmusic-theme .goog-menuitem {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem .goog-menuitem-content,\n.gmusic-theme .goog-menuitem-highlight .goog-menuitem-content .goog-submenu-arrow,\n.gmusic-theme .goog-menuitem-highlight .goog-menuitem-content {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .goog-menu .goog-menuitem:hover,\n.gmusic-theme .goog-menu .goog-menuseparator {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .artist-details .bio-wrapper .bio,\n.gmusic-theme .material-card .details paper-icon-button.menu-anchor {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row.hover td a,\n.gmusic-theme .song-row.selected-song-row td a {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-action-dialog {\n  background: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .settings-card {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #queue-overlay {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #queue-overlay::after {\n  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) <<BACK_PRIMARY>> <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-content {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .upload-dialog-description {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"index\"] .hover-button[data-id=\"play\"] {\n  background-color: <<INVERSE>><<BACK_HIGHLIGHT>><</INVERSE>> !important;\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .goog-menuheader {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container input,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container textarea,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea,\n.gmusic-theme .paper-input-container-0 .input-content.paper-input-container .paper-input-input,\n.gmusic-theme .material-share-options #sharing-option-label {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #loading-overlay.material[data-type=\"full-loading-overlay\"],\n.gmusic-theme #loading-overlay.material[data-type=\"regular-loading-overlay\"] {\n  background: <<ALPHA 0.5>><<BACK_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme iron-overlay-backdrop {\n  background: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme paper-checkbox #checkboxLabel {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme a:not(.gpm-now-card-grid),\n.gmusic-theme .simple-dialog a {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #topBar #material-one-right a {\n  /* Reset Color to GPM Default */\n  color: #666 !important;\n}\n\n.gmusic-theme .song-table [data-col=\"title\"],\n.gmusic-theme .song-table.mini [data-col=\"song-details\"] .song-title {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .subcategories-list,\n.gmusic-theme .material-detail-view .station-container-content-wrapper .material-container-details {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .material-list li a:hover,\n.gmusic-theme .material-list li a:focus {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .material-detail-view .material-container-details .read-more-button:hover {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme paper-action-dialog paper-button,\n.gmusic-theme .share-buttons .share-button .button-label {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .song-row:hover td,\n.gmusic-theme .song-row:hover td > * {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .song-row:hover [data-col=\"track\"] .hover-button[data-id=\"play\"] {\n  background-color: <<INVERSE>><<BACK_HIGHLIGHT>><</INVERSE>> !important;\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .rating-container li {\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .cluster .header .cluster-title,\n.gmusic-theme .cluster .header .subtitle {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-dialog {\n  background: <<BACK_SECONDARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .simple-dialog {\n  background-color: <<BACK_PRIMARY>> !important;\n  border-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .simple-dialog,\n.gmusic-theme .simple-dialog > div,\n.gmusic-theme .edit-section > div.browseSubtext {\n  background-color: <<BACK_PRIMARY>> !important;\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .material-detail-view .top-tracks {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #music-content .info-card {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button .playlist-subscribed,\n.gmusic-theme paper-button#unsubscribe-playlist-button:hover .playlist-unsubscribe {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:unsubscribe\"] path:last-child,\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:last-child {\n  stroke: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:first-child,\n.gmusic-theme paper-button#unsubscribe-playlist-button iron-icon[icon=\"sj:subscribed\"] path:last-child {\n  fill: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .podcast-badge {\n  color: <<FORE_PRIMARY>> !important;\n  background-color: rgba(0, 0, 0, 0) !important;\n}\n\n.gmusic-theme .screensaver > canvas {\n  -webkit-filter: invert(1) brightness(0.4) !important;\n}\n\n.gmusic-theme #playlist-drawer paper-header-panel paper-toolbar {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer paper-header-panel playlist-drawer-header {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer .playlist-drawer-item .playlist-wrapper:hover,\n.gmusic-theme #playlist-drawer .playlist-drawer-item .playlist-wrapper:focus,\n.gmusic-theme #playlist-drawer .playlist-drawer-item sj-play-button:hover~.playlist-wrapper,\n.gmusic-theme #playlist-drawer .playlist-drawer-item iron-icon:hover~.playlist-wrapper,\n.gmusic-theme #playlist-drawer .playlist-drawer-item.playlist-drop-target:not(.subscribed) .playlist-wrapper {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .input-content.paper-input-container  input,\n.gmusic-theme .input-content.paper-input-container  textarea,\n.gmusic-theme .input-content.paper-input-container  iron-autogrow-textarea,\n.gmusic-theme .input-content.paper-input-container  .paper-input-input {\n  color: <<DARKEN 0.3>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme sj-scrolling-module h2,\n.gmusic-theme sj-scrolling-module h2 span.tooltip,\n.gmusic-theme sj-scrolling-module [slot=\"subtitle\"] {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar {\n  border-bottom: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme #nav-container {\n  border-right: 1px solid <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .sj-card-0[card-aspect-ratio=\"wide\"] {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme .sj-card-0  .card-description,\n.gmusic-theme .sj-card-0  .card-subtitle {\n  color: rgba(255, 255, 255, 0.54) !important;\n}\n\n.gmusic-theme .gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid svg {\n  fill: white !important;\n}\n\n.gmusic-theme .gpm-now-card-grid-0 .buttons.gpm-now-card-grid .gpm-now-card-grid {\n  background-color: <<ALPHA 0.5>><<FORE_SECONDARY>><</ALPHA>> !important;\n}\n\n.gmusic-theme .sj-scrolling-module-0  .module-subtitle {\n  color: rgba(255, 255, 255, 0.7) !important;\n}\n\n.gmusic-theme sj-home[selected=\"0\"] #backgroundColor::after,\n.gmusic-theme sj-home[selected=\"1\"] #backgroundColor::after {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme sj-home #backgroundColor::after {\n  content: '' !important;\n  display: block !important;\n  background: <<ALPHA 0.3>><<BACK_HIGHLIGHT>><</ALPHA>> !important;\n  position: absolute !important;\n  top: 0 !important;\n  left: 0 !important;\n  right: 0 !important;\n  bottom: 0 !important;\n  z-index: 1 !important;\n  transition: background-color 0.3s ease-in-out !important;\n}\n\n.gmusic-theme #playlist-drawer-button:after,\n.gmusic-theme #left-nav-open-button:after,\n.gmusic-theme #left-nav-close-button:after {\n  -webkit-filter: invert(1) !important;\n}\n\n.gmusic-theme .paper-toolbar-0,\n.gmusic-theme .gpm-card-grid-3  #gridTitle {\n  color: #efefef !important;\n}\n\n.gmusic-theme .sj-page-indicator-0 .sj-page-tab.sj-page-indicator svg {\n  fill: rgba(255, 255, 255, 0.7) !important;\n}\n\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"title\"],\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"subtitle\"],\n.gmusic-theme .sj-card-0 #details.sj-card > [slot=\"description\"] {\n  color: #efefef !important;\n}\n\n.gmusic-theme .paper-dialog-scrollable-0.is-scrolled:not(:first-child)::before,\n.gmusic-theme paper-dialog-scrollable.can-scroll:not([style-scope]):not(.style-scope):not(.scrolled-to-bottom)::after {\n  background: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog tr:first-child {\n  border-top: 1px solid <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog tr {\n  border-bottom: 1px solid <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog caption {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog td {\n  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .shortcuts-dialog td:nth-child(2) {\n  color: <<DARKEN 0.4>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .button-bar {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme .nuq-view button.quiz-block .name {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion:hover,\n.gmusic-theme sj-entity-suggestion.query-selected {\n  background-color: <<BACK_SECONDARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #buttonContent {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #buttonContent svg {\n  fill: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #title.sj-entity-suggestion {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme sj-entity-suggestion #subtitle.sj-entity-suggestion {\n  color: <<DARKEN 0.5>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {\n  border-bottom-color: <<BACK_PRIMARY>> !important;\n  box-shadow: 0px 1px 0px 0px #666 !important;\n}\n\n.gmusic-theme gpm-detail-page-header .gpm-detail-page-header > * {\n  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme gpm-detail-page-header[description-overflows] #descriptionWrapper.gpm-detail-page-header:hover {\n  background: <<DARKEN 0.7>><<FORE_PRIMARY>><</DARKEN>> !important;\n}\n\n.gmusic-theme .top-tracks {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme .more-songs-container {\n  border-top-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list {\n  background-color: <<BACK_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list > *:hover,\n.gmusic-theme gpm-vertical-list #items.gpm-vertical-list > *[focused] {\n  background-color: <<BACK_HIGHLIGHT>> !important;\n}\n\n.gmusic-theme paper-tabs #tabsContainer.paper-tabs {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme gpm-card-grid > [slot=\"title\"] {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #breadcrumbs-dropdown-button,\n.gmusic-theme #grouped-card-dropdown-button {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #playlist-drawer-button {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-app-bar #countSummary {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme #material-app-bar #action-bar-container {\n  color: <<FORE_PRIMARY>> !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar,\n.gmusic-theme ::shadow ::-webkit-scrollbar {\n  width: 9px !important;\n  background: transparent !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track {\n  background-color: rgba(255, 255, 255, 0.05) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track:hover,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track:hover {\n  background-color: rgba(255, 255, 255, 0.1) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-track:active,\n.gmusic-theme ::shadow ::-webkit-scrollbar-track:active {\n  background-color: rgba(255, 255, 255, 0.07) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb {\n  background-color: rgba(255, 255, 255, 0.1) !important;\n  border-radius: 0 !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb:hover,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb:hover {\n  background-color: rgba(255, 255, 255, 0.15) !important;\n}\n\n.gmusic-theme ::-webkit-scrollbar-thumb:active,\n.gmusic-theme ::shadow ::-webkit-scrollbar-thumb:active {\n  background-color: rgba(255, 255, 255, 0.125) !important;\n}\n\n.gmusic-theme .goog-menuheader .spinner {\n  background: <<BACK_PRIMARY>> url(ani_loading_white.gif) no-repeat center center !important;\n  background-size: 30px 30px !important;\n}";
 var BASE_SVG = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 214 48\" id=\"normalSVGIcon\" class=\"menu-logo\">\r\n  <g fill=\"#757575\">\r\n    <path d=\"M12.3 20.5c0-5.4 4.6-9.8 10-9.8 3 0 5.1 1.2 6.7 2.7l-1.9 1.9c-1.2-1.1-2.7-1.9-4.8-1.9-4 0-7.1 3.2-7.1 7.2s3.1 7.2 7.1 7.2c2.6 0 4-1 5-2 .8-.8 1.3-1.9 1.5-3.4h-6.4v-2.7h9c.1.5.1 1.1.1 1.7 0 2-.6 4.5-2.3 6.3-1.7 1.8-3.9 2.8-6.9 2.8-5.5-.1-10-4.5-10-10zM38.8 17.7c-3.5 0-6.4 2.7-6.4 6.3 0 3.6 2.9 6.3 6.4 6.3 3.5 0 6.4-2.7 6.4-6.3-.1-3.6-2.9-6.3-6.4-6.3zm0 10.2c-1.9 0-3.6-1.6-3.6-3.8 0-2.3 1.7-3.8 3.6-3.8 1.9 0 3.6 1.6 3.6 3.8-.1 2.2-1.7 3.8-3.6 3.8zM52.6 17.7c-3.5 0-6.4 2.7-6.4 6.3 0 3.6 2.9 6.3 6.4 6.3 3.5 0 6.4-2.7 6.4-6.3 0-3.6-2.9-6.3-6.4-6.3zm0 10.2c-1.9 0-3.6-1.6-3.6-3.8 0-2.3 1.7-3.8 3.6-3.8s3.6 1.6 3.6 3.8c0 2.2-1.7 3.8-3.6 3.8zM69.7 18.1v1h-.1c-.6-.7-1.8-1.4-3.3-1.4-3.2 0-6.1 2.8-6.1 6.4 0 3.6 2.9 6.3 6.1 6.3 1.5 0 2.7-.7 3.3-1.4h.1v.9c0 2.4-1.3 3.7-3.4 3.7-1.7 0-2.8-1.2-3.2-2.3l-2.4 1c.7 1.7 2.5 3.7 5.6 3.7 3.3 0 6-1.9 6-6.6V18.1h-2.6zm-3.2 9.8c-1.9 0-3.5-1.6-3.5-3.8 0-2.2 1.6-3.9 3.5-3.9s3.4 1.6 3.4 3.9c-.1 2.2-1.5 3.8-3.4 3.8zM74.2 11.4H77V30h-2.8zM84.6 27.9c-1.4 0-2.4-.6-3.1-1.9l8.5-3.5-.3-.7c-.5-1.4-2.1-4-5.4-4-3.3 0-6 2.6-6 6.3 0 3.6 2.7 6.3 6.3 6.3 2.9 0 4.6-1.8 5.3-2.8l-2.2-1.4c-.7 1-1.7 1.7-3.1 1.7zm-.2-7.7c1.1 0 2 .6 2.4 1.3l-5.7 2.4c-.1-2.5 1.9-3.7 3.3-3.7z\"/></g><path fill=\"none\" d=\"M12.1 10.7h78v25.5h-78z\"/><path fill=\"none\" d=\"M12.1 10.7h189.8v25.5H12.1z\"/><g fill=\"#EE6B00\"><path d=\"M143.7 12.8h2.2l6 10.5h.1l6-10.5h2.2V30H158V19.8l.1-2.9h-.1l-5.4 9.4h-1.3l-5.4-9.4h-.1l.1 2.9V30h-2.2V12.8zM171.3 30v-1.6h-.1c-.6 1.1-2.1 2-3.7 2-3 0-4.5-2-4.5-4.9v-7.2h2.2v6.8c0 2.4 1.2 3.3 2.9 3.3 1.9 0 3.1-1.8 3.1-3.6v-6.5h2.2V30h-2.1zM174.9 27l2-.8c.6 1.5 1.8 2.2 3.2 2.2 1.4 0 2.4-.7 2.4-1.7 0-.6-.4-1.2-1.6-1.6l-2.4-.6c-1.1-.3-3.1-1.2-3.1-3.3 0-2.1 2.2-3.5 4.7-3.5 2 0 3.8.9 4.5 2.7l-1.9.8c-.5-1.1-1.5-1.6-2.7-1.6-1.2 0-2.3.6-2.3 1.5 0 .7.6 1.2 1.6 1.4l2.3.6c2.3.6 3.2 2 3.2 3.4 0 2.1-1.9 3.7-4.6 3.7-3 .2-4.6-1.5-5.3-3.2zM186 14.2c0-.9.7-1.6 1.6-1.6.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6-.9-.1-1.6-.8-1.6-1.6zm.4 15.8V18.2h2.2V30h-2.2zM190.5 24.1c0-3.6 2.5-6.3 6-6.3 2.8 0 4.4 1.7 5.2 3.4l-2 .8c-.6-1.4-1.7-2.2-3.3-2.2-1.9 0-3.7 1.7-3.7 4.2s1.8 4.2 3.7 4.2c1.6 0 2.8-.8 3.4-2.2l2 .8c-.7 1.7-2.4 3.4-5.2 3.4-3.6.2-6.1-2.5-6.1-6.1z\"/></g><g fill=\"#757575\"><path d=\"M102.3 11.4h-6.7V30h2.8v-7.1h3.9c3.1 0 6.1-2.2 6.1-5.8s-3.1-5.7-6.1-5.7zm0 9h-4V14h4c2.1 0 3.3 1.7 3.3 3.2 0 1.4-1.2 3.2-3.3 3.2zM112.7 30V11.4h-2.8V30h2.8zM125.2 30v-7.1c0-3.3-2.5-5.2-5.7-5.2-2 0-4.1.9-5 2.9l2.5 1c.5-1 1.5-1.4 2.5-1.4 1.4 0 2.9.9 2.9 2.4v.2c-.5-.3-1.6-.7-2.9-.7-2.7 0-5.4 1.5-5.4 4.2 0 2.5 2.2 4.1 4.6 4.1 1.9 0 2.9-.8 3.5-1.8h.1V30h2.9zm-6-2.1c-.9 0-2.2-.5-2.2-1.6 0-1.4 1.6-2 2.9-2 1.2 0 1.8.3 2.5.6-.1 1.8-1.6 3-3.2 3zM134.9 18.1l-3.2 8.1h-.1l-3.3-8.1h-3l5 11.3-2.8 6.3h2.9l7.6-17.6h-3.1z\"/>\r\n  </g>\r\n  <path fill=\"none\" d=\"M.1 0h213.8v48H.1z\"/>\r\n</svg>\r\n";
 var CONSTANTS = require('../lib/_constants');
 
@@ -234,7 +234,7 @@ GMusicTheme.TYPES = {
 module.exports = GMusicTheme;
 
 
-},{"../lib/_constants":2,"color":11}],2:[function(require,module,exports){
+},{"../lib/_constants":2,"color":12}],2:[function(require,module,exports){
 module.exports = {
   CLASS_NAMESPACE: 'gmusic-theme',
 };
@@ -256,68 +256,102 @@ for (var i = 0, len = code.length; i < len; ++i) {
   revLookup[code.charCodeAt(i)] = i
 }
 
+// Support decoding URL-safe base64 strings, as Node.js does.
+// See: https://en.wikipedia.org/wiki/Base64#URL_applications
 revLookup['-'.charCodeAt(0)] = 62
 revLookup['_'.charCodeAt(0)] = 63
 
-function placeHoldersCount (b64) {
+function getLens (b64) {
   var len = b64.length
+
   if (len % 4 > 0) {
     throw new Error('Invalid string. Length must be a multiple of 4')
   }
 
-  // the number of equal signs (place holders)
-  // if there are two placeholders, than the two characters before it
-  // represent one byte
-  // if there is only one, then the three characters before it represent 2 bytes
-  // this is just a cheap hack to not do indexOf twice
-  return b64[len - 2] === '=' ? 2 : b64[len - 1] === '=' ? 1 : 0
+  // Trim off extra bytes after placeholder bytes are found
+  // See: https://github.com/beatgammit/base64-js/issues/42
+  var validLen = b64.indexOf('=')
+  if (validLen === -1) validLen = len
+
+  var placeHoldersLen = validLen === len
+    ? 0
+    : 4 - (validLen % 4)
+
+  return [validLen, placeHoldersLen]
 }
 
+// base64 is 4/3 + up to two characters of the original data
 function byteLength (b64) {
-  // base64 is 4/3 + up to two characters of the original data
-  return b64.length * 3 / 4 - placeHoldersCount(b64)
+  var lens = getLens(b64)
+  var validLen = lens[0]
+  var placeHoldersLen = lens[1]
+  return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
+}
+
+function _byteLength (b64, validLen, placeHoldersLen) {
+  return ((validLen + placeHoldersLen) * 3 / 4) - placeHoldersLen
 }
 
 function toByteArray (b64) {
-  var i, j, l, tmp, placeHolders, arr
-  var len = b64.length
-  placeHolders = placeHoldersCount(b64)
+  var tmp
+  var lens = getLens(b64)
+  var validLen = lens[0]
+  var placeHoldersLen = lens[1]
 
-  arr = new Arr(len * 3 / 4 - placeHolders)
+  var arr = new Arr(_byteLength(b64, validLen, placeHoldersLen))
+
+  var curByte = 0
 
   // if there are placeholders, only get up to the last complete 4 chars
-  l = placeHolders > 0 ? len - 4 : len
+  var len = placeHoldersLen > 0
+    ? validLen - 4
+    : validLen
 
-  var L = 0
-
-  for (i = 0, j = 0; i < l; i += 4, j += 3) {
-    tmp = (revLookup[b64.charCodeAt(i)] << 18) | (revLookup[b64.charCodeAt(i + 1)] << 12) | (revLookup[b64.charCodeAt(i + 2)] << 6) | revLookup[b64.charCodeAt(i + 3)]
-    arr[L++] = (tmp >> 16) & 0xFF
-    arr[L++] = (tmp >> 8) & 0xFF
-    arr[L++] = tmp & 0xFF
+  for (var i = 0; i < len; i += 4) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 18) |
+      (revLookup[b64.charCodeAt(i + 1)] << 12) |
+      (revLookup[b64.charCodeAt(i + 2)] << 6) |
+      revLookup[b64.charCodeAt(i + 3)]
+    arr[curByte++] = (tmp >> 16) & 0xFF
+    arr[curByte++] = (tmp >> 8) & 0xFF
+    arr[curByte++] = tmp & 0xFF
   }
 
-  if (placeHolders === 2) {
-    tmp = (revLookup[b64.charCodeAt(i)] << 2) | (revLookup[b64.charCodeAt(i + 1)] >> 4)
-    arr[L++] = tmp & 0xFF
-  } else if (placeHolders === 1) {
-    tmp = (revLookup[b64.charCodeAt(i)] << 10) | (revLookup[b64.charCodeAt(i + 1)] << 4) | (revLookup[b64.charCodeAt(i + 2)] >> 2)
-    arr[L++] = (tmp >> 8) & 0xFF
-    arr[L++] = tmp & 0xFF
+  if (placeHoldersLen === 2) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 2) |
+      (revLookup[b64.charCodeAt(i + 1)] >> 4)
+    arr[curByte++] = tmp & 0xFF
+  }
+
+  if (placeHoldersLen === 1) {
+    tmp =
+      (revLookup[b64.charCodeAt(i)] << 10) |
+      (revLookup[b64.charCodeAt(i + 1)] << 4) |
+      (revLookup[b64.charCodeAt(i + 2)] >> 2)
+    arr[curByte++] = (tmp >> 8) & 0xFF
+    arr[curByte++] = tmp & 0xFF
   }
 
   return arr
 }
 
 function tripletToBase64 (num) {
-  return lookup[num >> 18 & 0x3F] + lookup[num >> 12 & 0x3F] + lookup[num >> 6 & 0x3F] + lookup[num & 0x3F]
+  return lookup[num >> 18 & 0x3F] +
+    lookup[num >> 12 & 0x3F] +
+    lookup[num >> 6 & 0x3F] +
+    lookup[num & 0x3F]
 }
 
 function encodeChunk (uint8, start, end) {
   var tmp
   var output = []
   for (var i = start; i < end; i += 3) {
-    tmp = (uint8[i] << 16) + (uint8[i + 1] << 8) + (uint8[i + 2])
+    tmp =
+      ((uint8[i] << 16) & 0xFF0000) +
+      ((uint8[i + 1] << 8) & 0xFF00) +
+      (uint8[i + 2] & 0xFF)
     output.push(tripletToBase64(tmp))
   }
   return output.join('')
@@ -327,40 +361,43 @@ function fromByteArray (uint8) {
   var tmp
   var len = uint8.length
   var extraBytes = len % 3 // if we have 1 byte left, pad 2 bytes
-  var output = ''
   var parts = []
   var maxChunkLength = 16383 // must be multiple of 3
 
   // go through the array every three bytes, we'll deal with trailing stuff later
   for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
-    parts.push(encodeChunk(uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)))
+    parts.push(encodeChunk(
+      uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)
+    ))
   }
 
   // pad the end with zeros, but make sure to not forget the extra bytes
   if (extraBytes === 1) {
     tmp = uint8[len - 1]
-    output += lookup[tmp >> 2]
-    output += lookup[(tmp << 4) & 0x3F]
-    output += '=='
+    parts.push(
+      lookup[tmp >> 2] +
+      lookup[(tmp << 4) & 0x3F] +
+      '=='
+    )
   } else if (extraBytes === 2) {
-    tmp = (uint8[len - 2] << 8) + (uint8[len - 1])
-    output += lookup[tmp >> 10]
-    output += lookup[(tmp >> 4) & 0x3F]
-    output += lookup[(tmp << 2) & 0x3F]
-    output += '='
+    tmp = (uint8[len - 2] << 8) + uint8[len - 1]
+    parts.push(
+      lookup[tmp >> 10] +
+      lookup[(tmp >> 4) & 0x3F] +
+      lookup[(tmp << 2) & 0x3F] +
+      '='
+    )
   }
-
-  parts.push(output)
 
   return parts.join('')
 }
 
 },{}],4:[function(require,module,exports){
-(function (global){
+(function (Buffer){
 /*!
  * The buffer module from node.js, for the browser.
  *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */
 /* eslint-disable no-proto */
@@ -369,80 +406,73 @@ function fromByteArray (uint8) {
 
 var base64 = require('base64-js')
 var ieee754 = require('ieee754')
-var isArray = require('isarray')
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
 exports.INSPECT_MAX_BYTES = 50
 
+var K_MAX_LENGTH = 0x7fffffff
+exports.kMaxLength = K_MAX_LENGTH
+
 /**
  * If `Buffer.TYPED_ARRAY_SUPPORT`:
  *   === true    Use Uint8Array implementation (fastest)
- *   === false   Use Object implementation (most compatible, even IE6)
+ *   === false   Print warning and recommend using `buffer` v4.x which has an Object
+ *               implementation (most compatible, even IE6)
  *
  * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
  * Opera 11.6+, iOS 4.2+.
  *
- * Due to various browser bugs, sometimes the Object implementation will be used even
- * when the browser supports typed arrays.
- *
- * Note:
- *
- *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
- *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
- *
- *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
- *
- *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
- *     incorrect length in some situations.
-
- * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
- * get the Object implementation, which is slower but behaves correctly.
+ * We report that the browser does not support typed arrays if the are not subclassable
+ * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
+ * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
+ * for __proto__ and has a buggy typed array implementation.
  */
-Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
-  ? global.TYPED_ARRAY_SUPPORT
-  : typedArraySupport()
+Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
 
-/*
- * Export kMaxLength after typed array support is determined.
- */
-exports.kMaxLength = kMaxLength()
+if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
+    typeof console.error === 'function') {
+  console.error(
+    'This browser lacks typed array (Uint8Array) support which is required by ' +
+    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
+  )
+}
 
 function typedArraySupport () {
+  // Can typed array instances can be augmented?
   try {
     var arr = new Uint8Array(1)
-    arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
-    return arr.foo() === 42 && // typed array instances can be augmented
-        typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
+    arr.__proto__ = { __proto__: Uint8Array.prototype, foo: function () { return 42 } }
+    return arr.foo() === 42
   } catch (e) {
     return false
   }
 }
 
-function kMaxLength () {
-  return Buffer.TYPED_ARRAY_SUPPORT
-    ? 0x7fffffff
-    : 0x3fffffff
-}
-
-function createBuffer (that, length) {
-  if (kMaxLength() < length) {
-    throw new RangeError('Invalid typed array length')
+Object.defineProperty(Buffer.prototype, 'parent', {
+  enumerable: true,
+  get: function () {
+    if (!Buffer.isBuffer(this)) return undefined
+    return this.buffer
   }
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    // Return an augmented `Uint8Array` instance, for best performance
-    that = new Uint8Array(length)
-    that.__proto__ = Buffer.prototype
-  } else {
-    // Fallback: Return an object instance of the Buffer class
-    if (that === null) {
-      that = new Buffer(length)
-    }
-    that.length = length
-  }
+})
 
-  return that
+Object.defineProperty(Buffer.prototype, 'offset', {
+  enumerable: true,
+  get: function () {
+    if (!Buffer.isBuffer(this)) return undefined
+    return this.byteOffset
+  }
+})
+
+function createBuffer (length) {
+  if (length > K_MAX_LENGTH) {
+    throw new RangeError('The value "' + length + '" is invalid for option "size"')
+  }
+  // Return an augmented `Uint8Array` instance
+  var buf = new Uint8Array(length)
+  buf.__proto__ = Buffer.prototype
+  return buf
 }
 
 /**
@@ -456,44 +486,77 @@ function createBuffer (that, length) {
  */
 
 function Buffer (arg, encodingOrOffset, length) {
-  if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
-    return new Buffer(arg, encodingOrOffset, length)
-  }
-
   // Common case.
   if (typeof arg === 'number') {
     if (typeof encodingOrOffset === 'string') {
-      throw new Error(
-        'If encoding is specified then the first argument must be a string'
+      throw new TypeError(
+        'The "string" argument must be of type string. Received type number'
       )
     }
-    return allocUnsafe(this, arg)
+    return allocUnsafe(arg)
   }
-  return from(this, arg, encodingOrOffset, length)
+  return from(arg, encodingOrOffset, length)
+}
+
+// Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
+if (typeof Symbol !== 'undefined' && Symbol.species != null &&
+    Buffer[Symbol.species] === Buffer) {
+  Object.defineProperty(Buffer, Symbol.species, {
+    value: null,
+    configurable: true,
+    enumerable: false,
+    writable: false
+  })
 }
 
 Buffer.poolSize = 8192 // not used by this implementation
 
-// TODO: Legacy, not needed anymore. Remove in next major version.
-Buffer._augment = function (arr) {
-  arr.__proto__ = Buffer.prototype
-  return arr
-}
-
-function from (that, value, encodingOrOffset, length) {
-  if (typeof value === 'number') {
-    throw new TypeError('"value" argument must not be a number')
-  }
-
-  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
-    return fromArrayBuffer(that, value, encodingOrOffset, length)
-  }
-
+function from (value, encodingOrOffset, length) {
   if (typeof value === 'string') {
-    return fromString(that, value, encodingOrOffset)
+    return fromString(value, encodingOrOffset)
   }
 
-  return fromObject(that, value)
+  if (ArrayBuffer.isView(value)) {
+    return fromArrayLike(value)
+  }
+
+  if (value == null) {
+    throw TypeError(
+      'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
+      'or Array-like Object. Received type ' + (typeof value)
+    )
+  }
+
+  if (isInstance(value, ArrayBuffer) ||
+      (value && isInstance(value.buffer, ArrayBuffer))) {
+    return fromArrayBuffer(value, encodingOrOffset, length)
+  }
+
+  if (typeof value === 'number') {
+    throw new TypeError(
+      'The "value" argument must not be of type number. Received type number'
+    )
+  }
+
+  var valueOf = value.valueOf && value.valueOf()
+  if (valueOf != null && valueOf !== value) {
+    return Buffer.from(valueOf, encodingOrOffset, length)
+  }
+
+  var b = fromObject(value)
+  if (b) return b
+
+  if (typeof Symbol !== 'undefined' && Symbol.toPrimitive != null &&
+      typeof value[Symbol.toPrimitive] === 'function') {
+    return Buffer.from(
+      value[Symbol.toPrimitive]('string'), encodingOrOffset, length
+    )
+  }
+
+  throw new TypeError(
+    'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
+    'or Array-like Object. Received type ' + (typeof value)
+  )
 }
 
 /**
@@ -505,44 +568,36 @@ function from (that, value, encodingOrOffset, length) {
  * Buffer.from(arrayBuffer[, byteOffset[, length]])
  **/
 Buffer.from = function (value, encodingOrOffset, length) {
-  return from(null, value, encodingOrOffset, length)
+  return from(value, encodingOrOffset, length)
 }
 
-if (Buffer.TYPED_ARRAY_SUPPORT) {
-  Buffer.prototype.__proto__ = Uint8Array.prototype
-  Buffer.__proto__ = Uint8Array
-  if (typeof Symbol !== 'undefined' && Symbol.species &&
-      Buffer[Symbol.species] === Buffer) {
-    // Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
-    Object.defineProperty(Buffer, Symbol.species, {
-      value: null,
-      configurable: true
-    })
-  }
-}
+// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
+// https://github.com/feross/buffer/pull/148
+Buffer.prototype.__proto__ = Uint8Array.prototype
+Buffer.__proto__ = Uint8Array
 
 function assertSize (size) {
   if (typeof size !== 'number') {
-    throw new TypeError('"size" argument must be a number')
+    throw new TypeError('"size" argument must be of type number')
   } else if (size < 0) {
-    throw new RangeError('"size" argument must not be negative')
+    throw new RangeError('The value "' + size + '" is invalid for option "size"')
   }
 }
 
-function alloc (that, size, fill, encoding) {
+function alloc (size, fill, encoding) {
   assertSize(size)
   if (size <= 0) {
-    return createBuffer(that, size)
+    return createBuffer(size)
   }
   if (fill !== undefined) {
     // Only pay attention to encoding if it's a string. This
     // prevents accidentally sending in a number that would
     // be interpretted as a start offset.
     return typeof encoding === 'string'
-      ? createBuffer(that, size).fill(fill, encoding)
-      : createBuffer(that, size).fill(fill)
+      ? createBuffer(size).fill(fill, encoding)
+      : createBuffer(size).fill(fill)
   }
-  return createBuffer(that, size)
+  return createBuffer(size)
 }
 
 /**
@@ -550,132 +605,114 @@ function alloc (that, size, fill, encoding) {
  * alloc(size[, fill[, encoding]])
  **/
 Buffer.alloc = function (size, fill, encoding) {
-  return alloc(null, size, fill, encoding)
+  return alloc(size, fill, encoding)
 }
 
-function allocUnsafe (that, size) {
+function allocUnsafe (size) {
   assertSize(size)
-  that = createBuffer(that, size < 0 ? 0 : checked(size) | 0)
-  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-    for (var i = 0; i < size; ++i) {
-      that[i] = 0
-    }
-  }
-  return that
+  return createBuffer(size < 0 ? 0 : checked(size) | 0)
 }
 
 /**
  * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
  * */
 Buffer.allocUnsafe = function (size) {
-  return allocUnsafe(null, size)
+  return allocUnsafe(size)
 }
 /**
  * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
  */
 Buffer.allocUnsafeSlow = function (size) {
-  return allocUnsafe(null, size)
+  return allocUnsafe(size)
 }
 
-function fromString (that, string, encoding) {
+function fromString (string, encoding) {
   if (typeof encoding !== 'string' || encoding === '') {
     encoding = 'utf8'
   }
 
   if (!Buffer.isEncoding(encoding)) {
-    throw new TypeError('"encoding" must be a valid string encoding')
+    throw new TypeError('Unknown encoding: ' + encoding)
   }
 
   var length = byteLength(string, encoding) | 0
-  that = createBuffer(that, length)
+  var buf = createBuffer(length)
 
-  var actual = that.write(string, encoding)
+  var actual = buf.write(string, encoding)
 
   if (actual !== length) {
     // Writing a hex string, for example, that contains invalid characters will
     // cause everything after the first invalid character to be ignored. (e.g.
     // 'abxxcd' will be treated as 'ab')
-    that = that.slice(0, actual)
+    buf = buf.slice(0, actual)
   }
 
-  return that
+  return buf
 }
 
-function fromArrayLike (that, array) {
+function fromArrayLike (array) {
   var length = array.length < 0 ? 0 : checked(array.length) | 0
-  that = createBuffer(that, length)
+  var buf = createBuffer(length)
   for (var i = 0; i < length; i += 1) {
-    that[i] = array[i] & 255
+    buf[i] = array[i] & 255
   }
-  return that
+  return buf
 }
 
-function fromArrayBuffer (that, array, byteOffset, length) {
-  array.byteLength // this throws if `array` is not a valid ArrayBuffer
-
+function fromArrayBuffer (array, byteOffset, length) {
   if (byteOffset < 0 || array.byteLength < byteOffset) {
-    throw new RangeError('\'offset\' is out of bounds')
+    throw new RangeError('"offset" is outside of buffer bounds')
   }
 
   if (array.byteLength < byteOffset + (length || 0)) {
-    throw new RangeError('\'length\' is out of bounds')
+    throw new RangeError('"length" is outside of buffer bounds')
   }
 
+  var buf
   if (byteOffset === undefined && length === undefined) {
-    array = new Uint8Array(array)
+    buf = new Uint8Array(array)
   } else if (length === undefined) {
-    array = new Uint8Array(array, byteOffset)
+    buf = new Uint8Array(array, byteOffset)
   } else {
-    array = new Uint8Array(array, byteOffset, length)
+    buf = new Uint8Array(array, byteOffset, length)
   }
 
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    // Return an augmented `Uint8Array` instance, for best performance
-    that = array
-    that.__proto__ = Buffer.prototype
-  } else {
-    // Fallback: Return an object instance of the Buffer class
-    that = fromArrayLike(that, array)
-  }
-  return that
+  // Return an augmented `Uint8Array` instance
+  buf.__proto__ = Buffer.prototype
+  return buf
 }
 
-function fromObject (that, obj) {
+function fromObject (obj) {
   if (Buffer.isBuffer(obj)) {
     var len = checked(obj.length) | 0
-    that = createBuffer(that, len)
+    var buf = createBuffer(len)
 
-    if (that.length === 0) {
-      return that
+    if (buf.length === 0) {
+      return buf
     }
 
-    obj.copy(that, 0, 0, len)
-    return that
+    obj.copy(buf, 0, 0, len)
+    return buf
   }
 
-  if (obj) {
-    if ((typeof ArrayBuffer !== 'undefined' &&
-        obj.buffer instanceof ArrayBuffer) || 'length' in obj) {
-      if (typeof obj.length !== 'number' || isnan(obj.length)) {
-        return createBuffer(that, 0)
-      }
-      return fromArrayLike(that, obj)
+  if (obj.length !== undefined) {
+    if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
+      return createBuffer(0)
     }
-
-    if (obj.type === 'Buffer' && isArray(obj.data)) {
-      return fromArrayLike(that, obj.data)
-    }
+    return fromArrayLike(obj)
   }
 
-  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
+  if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
+    return fromArrayLike(obj.data)
+  }
 }
 
 function checked (length) {
-  // Note: cannot use `length < kMaxLength()` here because that fails when
+  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
   // length is NaN (which is otherwise coerced to zero.)
-  if (length >= kMaxLength()) {
+  if (length >= K_MAX_LENGTH) {
     throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
+                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
   }
   return length | 0
 }
@@ -688,12 +725,17 @@ function SlowBuffer (length) {
 }
 
 Buffer.isBuffer = function isBuffer (b) {
-  return !!(b != null && b._isBuffer)
+  return b != null && b._isBuffer === true &&
+    b !== Buffer.prototype // so Buffer.isBuffer(Buffer.prototype) will be false
 }
 
 Buffer.compare = function compare (a, b) {
+  if (isInstance(a, Uint8Array)) a = Buffer.from(a, a.offset, a.byteLength)
+  if (isInstance(b, Uint8Array)) b = Buffer.from(b, b.offset, b.byteLength)
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-    throw new TypeError('Arguments must be Buffers')
+    throw new TypeError(
+      'The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array'
+    )
   }
 
   if (a === b) return 0
@@ -734,7 +776,7 @@ Buffer.isEncoding = function isEncoding (encoding) {
 }
 
 Buffer.concat = function concat (list, length) {
-  if (!isArray(list)) {
+  if (!Array.isArray(list)) {
     throw new TypeError('"list" argument must be an Array of Buffers')
   }
 
@@ -754,6 +796,9 @@ Buffer.concat = function concat (list, length) {
   var pos = 0
   for (i = 0; i < list.length; ++i) {
     var buf = list[i]
+    if (isInstance(buf, Uint8Array)) {
+      buf = Buffer.from(buf)
+    }
     if (!Buffer.isBuffer(buf)) {
       throw new TypeError('"list" argument must be an Array of Buffers')
     }
@@ -767,16 +812,19 @@ function byteLength (string, encoding) {
   if (Buffer.isBuffer(string)) {
     return string.length
   }
-  if (typeof ArrayBuffer !== 'undefined' && typeof ArrayBuffer.isView === 'function' &&
-      (ArrayBuffer.isView(string) || string instanceof ArrayBuffer)) {
+  if (ArrayBuffer.isView(string) || isInstance(string, ArrayBuffer)) {
     return string.byteLength
   }
   if (typeof string !== 'string') {
-    string = '' + string
+    throw new TypeError(
+      'The "string" argument must be one of type string, Buffer, or ArrayBuffer. ' +
+      'Received type ' + typeof string
+    )
   }
 
   var len = string.length
-  if (len === 0) return 0
+  var mustMatch = (arguments.length > 2 && arguments[2] === true)
+  if (!mustMatch && len === 0) return 0
 
   // Use a for loop to avoid recursion
   var loweredCase = false
@@ -788,7 +836,6 @@ function byteLength (string, encoding) {
         return len
       case 'utf8':
       case 'utf-8':
-      case undefined:
         return utf8ToBytes(string).length
       case 'ucs2':
       case 'ucs-2':
@@ -800,7 +847,9 @@ function byteLength (string, encoding) {
       case 'base64':
         return base64ToBytes(string).length
       default:
-        if (loweredCase) return utf8ToBytes(string).length // assume utf8
+        if (loweredCase) {
+          return mustMatch ? -1 : utf8ToBytes(string).length // assume utf8
+        }
         encoding = ('' + encoding).toLowerCase()
         loweredCase = true
     }
@@ -878,8 +927,12 @@ function slowToString (encoding, start, end) {
   }
 }
 
-// The property is used by `Buffer.isBuffer` and `is-buffer` (in Safari 5-7) to detect
-// Buffer instances.
+// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
+// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
+// reliably in a browserify context because there could be multiple different
+// copies of the 'buffer' package in use. This method works even for Buffer
+// instances that were created from another copy of the `buffer` package.
+// See: https://github.com/feross/buffer/issues/154
 Buffer.prototype._isBuffer = true
 
 function swap (b, n, m) {
@@ -926,11 +979,13 @@ Buffer.prototype.swap64 = function swap64 () {
 }
 
 Buffer.prototype.toString = function toString () {
-  var length = this.length | 0
+  var length = this.length
   if (length === 0) return ''
   if (arguments.length === 0) return utf8Slice(this, 0, length)
   return slowToString.apply(this, arguments)
 }
+
+Buffer.prototype.toLocaleString = Buffer.prototype.toString
 
 Buffer.prototype.equals = function equals (b) {
   if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
@@ -941,16 +996,20 @@ Buffer.prototype.equals = function equals (b) {
 Buffer.prototype.inspect = function inspect () {
   var str = ''
   var max = exports.INSPECT_MAX_BYTES
-  if (this.length > 0) {
-    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
-    if (this.length > max) str += ' ... '
-  }
+  str = this.toString('hex', 0, max).replace(/(.{2})/g, '$1 ').trim()
+  if (this.length > max) str += ' ... '
   return '<Buffer ' + str + '>'
 }
 
 Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
+  if (isInstance(target, Uint8Array)) {
+    target = Buffer.from(target, target.offset, target.byteLength)
+  }
   if (!Buffer.isBuffer(target)) {
-    throw new TypeError('Argument must be a Buffer')
+    throw new TypeError(
+      'The "target" argument must be one of type Buffer or Uint8Array. ' +
+      'Received type ' + (typeof target)
+    )
   }
 
   if (start === undefined) {
@@ -1029,8 +1088,8 @@ function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
   } else if (byteOffset < -0x80000000) {
     byteOffset = -0x80000000
   }
-  byteOffset = +byteOffset  // Coerce to Number.
-  if (isNaN(byteOffset)) {
+  byteOffset = +byteOffset // Coerce to Number.
+  if (numberIsNaN(byteOffset)) {
     // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
     byteOffset = dir ? 0 : (buffer.length - 1)
   }
@@ -1059,8 +1118,7 @@ function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
     return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
   } else if (typeof val === 'number') {
     val = val & 0xFF // Search for a byte value [0-255]
-    if (Buffer.TYPED_ARRAY_SUPPORT &&
-        typeof Uint8Array.prototype.indexOf === 'function') {
+    if (typeof Uint8Array.prototype.indexOf === 'function') {
       if (dir) {
         return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
       } else {
@@ -1153,16 +1211,14 @@ function hexWrite (buf, string, offset, length) {
     }
   }
 
-  // must be an even number of digits
   var strLen = string.length
-  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
 
   if (length > strLen / 2) {
     length = strLen / 2
   }
   for (var i = 0; i < length; ++i) {
     var parsed = parseInt(string.substr(i * 2, 2), 16)
-    if (isNaN(parsed)) return i
+    if (numberIsNaN(parsed)) return i
     buf[offset + i] = parsed
   }
   return i
@@ -1201,15 +1257,14 @@ Buffer.prototype.write = function write (string, offset, length, encoding) {
     offset = 0
   // Buffer#write(string, offset[, length][, encoding])
   } else if (isFinite(offset)) {
-    offset = offset | 0
+    offset = offset >>> 0
     if (isFinite(length)) {
-      length = length | 0
+      length = length >>> 0
       if (encoding === undefined) encoding = 'utf8'
     } else {
       encoding = length
       length = undefined
     }
-  // legacy write(string, encoding, offset, length) - remove in v0.13
   } else {
     throw new Error(
       'Buffer.write(string, encoding, offset[, length]) is no longer supported'
@@ -1285,8 +1340,8 @@ function utf8Slice (buf, start, end) {
     var codePoint = null
     var bytesPerSequence = (firstByte > 0xEF) ? 4
       : (firstByte > 0xDF) ? 3
-      : (firstByte > 0xBF) ? 2
-      : 1
+        : (firstByte > 0xBF) ? 2
+          : 1
 
     if (i + bytesPerSequence <= end) {
       var secondByte, thirdByte, fourthByte, tempCodePoint
@@ -1408,7 +1463,7 @@ function utf16leSlice (buf, start, end) {
   var bytes = buf.slice(start, end)
   var res = ''
   for (var i = 0; i < bytes.length; i += 2) {
-    res += String.fromCharCode(bytes[i] + bytes[i + 1] * 256)
+    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
   }
   return res
 }
@@ -1434,18 +1489,9 @@ Buffer.prototype.slice = function slice (start, end) {
 
   if (end < start) end = start
 
-  var newBuf
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    newBuf = this.subarray(start, end)
-    newBuf.__proto__ = Buffer.prototype
-  } else {
-    var sliceLen = end - start
-    newBuf = new Buffer(sliceLen, undefined)
-    for (var i = 0; i < sliceLen; ++i) {
-      newBuf[i] = this[i + start]
-    }
-  }
-
+  var newBuf = this.subarray(start, end)
+  // Return an augmented `Uint8Array` instance
+  newBuf.__proto__ = Buffer.prototype
   return newBuf
 }
 
@@ -1458,8 +1504,8 @@ function checkOffset (offset, ext, length) {
 }
 
 Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
   var val = this[offset]
@@ -1473,8 +1519,8 @@ Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert)
 }
 
 Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) {
     checkOffset(offset, byteLength, this.length)
   }
@@ -1489,21 +1535,25 @@ Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert)
 }
 
 Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 1, this.length)
   return this[offset]
 }
 
 Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 2, this.length)
   return this[offset] | (this[offset + 1] << 8)
 }
 
 Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 2, this.length)
   return (this[offset] << 8) | this[offset + 1]
 }
 
 Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return ((this[offset]) |
@@ -1513,6 +1563,7 @@ Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
 }
 
 Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset] * 0x1000000) +
@@ -1522,8 +1573,8 @@ Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
 }
 
 Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
   var val = this[offset]
@@ -1540,8 +1591,8 @@ Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
 }
 
 Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) checkOffset(offset, byteLength, this.length)
 
   var i = byteLength
@@ -1558,24 +1609,28 @@ Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
 }
 
 Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 1, this.length)
   if (!(this[offset] & 0x80)) return (this[offset])
   return ((0xff - this[offset] + 1) * -1)
 }
 
 Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 2, this.length)
   var val = this[offset] | (this[offset + 1] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
 Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 2, this.length)
   var val = this[offset + 1] | (this[offset] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
 Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset]) |
@@ -1585,6 +1640,7 @@ Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
 }
 
 Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset] << 24) |
@@ -1594,21 +1650,25 @@ Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
 }
 
 Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
 
 Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, false, 23, 4)
 }
 
 Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, true, 52, 8)
 }
 
 Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
+  offset = offset >>> 0
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, false, 52, 8)
 }
@@ -1621,8 +1681,8 @@ function checkInt (buf, value, offset, ext, max, min) {
 
 Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
   value = +value
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) {
     var maxBytes = Math.pow(2, 8 * byteLength) - 1
     checkInt(this, value, offset, byteLength, maxBytes, 0)
@@ -1640,8 +1700,8 @@ Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, 
 
 Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
   value = +value
-  offset = offset | 0
-  byteLength = byteLength | 0
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
   if (!noAssert) {
     var maxBytes = Math.pow(2, 8 * byteLength) - 1
     checkInt(this, value, offset, byteLength, maxBytes, 0)
@@ -1659,89 +1719,57 @@ Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, 
 
 Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
-  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
   this[offset] = (value & 0xff)
   return offset + 1
 }
 
-function objectWriteUInt16 (buf, value, offset, littleEndian) {
-  if (value < 0) value = 0xffff + value + 1
-  for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
-    buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
-      (littleEndian ? i : 1 - i) * 8
-  }
-}
-
 Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
-    this[offset + 1] = (value >>> 8)
-  } else {
-    objectWriteUInt16(this, value, offset, true)
-  }
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
   return offset + 2
 }
 
 Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value >>> 8)
-    this[offset + 1] = (value & 0xff)
-  } else {
-    objectWriteUInt16(this, value, offset, false)
-  }
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
   return offset + 2
-}
-
-function objectWriteUInt32 (buf, value, offset, littleEndian) {
-  if (value < 0) value = 0xffffffff + value + 1
-  for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
-    buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
-  }
 }
 
 Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset + 3] = (value >>> 24)
-    this[offset + 2] = (value >>> 16)
-    this[offset + 1] = (value >>> 8)
-    this[offset] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, true)
-  }
+  this[offset + 3] = (value >>> 24)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 1] = (value >>> 8)
+  this[offset] = (value & 0xff)
   return offset + 4
 }
 
 Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value >>> 24)
-    this[offset + 1] = (value >>> 16)
-    this[offset + 2] = (value >>> 8)
-    this[offset + 3] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, false)
-  }
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
   return offset + 4
 }
 
 Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) {
-    var limit = Math.pow(2, 8 * byteLength - 1)
+    var limit = Math.pow(2, (8 * byteLength) - 1)
 
     checkInt(this, value, offset, byteLength, limit - 1, -limit)
   }
@@ -1762,9 +1790,9 @@ Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, no
 
 Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) {
-    var limit = Math.pow(2, 8 * byteLength - 1)
+    var limit = Math.pow(2, (8 * byteLength) - 1)
 
     checkInt(this, value, offset, byteLength, limit - 1, -limit)
   }
@@ -1785,9 +1813,8 @@ Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, no
 
 Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
-  if (!Buffer.TYPED_ARRAY_SUPPORT) value = Math.floor(value)
   if (value < 0) value = 0xff + value + 1
   this[offset] = (value & 0xff)
   return offset + 1
@@ -1795,58 +1822,42 @@ Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
 
 Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
-    this[offset + 1] = (value >>> 8)
-  } else {
-    objectWriteUInt16(this, value, offset, true)
-  }
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
   return offset + 2
 }
 
 Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value >>> 8)
-    this[offset + 1] = (value & 0xff)
-  } else {
-    objectWriteUInt16(this, value, offset, false)
-  }
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
   return offset + 2
 }
 
 Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value & 0xff)
-    this[offset + 1] = (value >>> 8)
-    this[offset + 2] = (value >>> 16)
-    this[offset + 3] = (value >>> 24)
-  } else {
-    objectWriteUInt32(this, value, offset, true)
-  }
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 3] = (value >>> 24)
   return offset + 4
 }
 
 Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
   value = +value
-  offset = offset | 0
+  offset = offset >>> 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
   if (value < 0) value = 0xffffffff + value + 1
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    this[offset] = (value >>> 24)
-    this[offset + 1] = (value >>> 16)
-    this[offset + 2] = (value >>> 8)
-    this[offset + 3] = (value & 0xff)
-  } else {
-    objectWriteUInt32(this, value, offset, false)
-  }
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
   return offset + 4
 }
 
@@ -1856,6 +1867,8 @@ function checkIEEE754 (buf, value, offset, ext, max, min) {
 }
 
 function writeFloat (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
   }
@@ -1872,6 +1885,8 @@ Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) 
 }
 
 function writeDouble (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
   }
@@ -1889,6 +1904,7 @@ Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert
 
 // copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
 Buffer.prototype.copy = function copy (target, targetStart, start, end) {
+  if (!Buffer.isBuffer(target)) throw new TypeError('argument should be a Buffer')
   if (!start) start = 0
   if (!end && end !== 0) end = this.length
   if (targetStart >= target.length) targetStart = target.length
@@ -1903,7 +1919,7 @@ Buffer.prototype.copy = function copy (target, targetStart, start, end) {
   if (targetStart < 0) {
     throw new RangeError('targetStart out of bounds')
   }
-  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
+  if (start < 0 || start >= this.length) throw new RangeError('Index out of range')
   if (end < 0) throw new RangeError('sourceEnd out of bounds')
 
   // Are we oob?
@@ -1913,22 +1929,19 @@ Buffer.prototype.copy = function copy (target, targetStart, start, end) {
   }
 
   var len = end - start
-  var i
 
-  if (this === target && start < targetStart && targetStart < end) {
+  if (this === target && typeof Uint8Array.prototype.copyWithin === 'function') {
+    // Use built-in when available, missing from IE11
+    this.copyWithin(targetStart, start, end)
+  } else if (this === target && start < targetStart && targetStart < end) {
     // descending copy from end
-    for (i = len - 1; i >= 0; --i) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
-    // ascending copy from start
-    for (i = 0; i < len; ++i) {
+    for (var i = len - 1; i >= 0; --i) {
       target[i + targetStart] = this[i + start]
     }
   } else {
     Uint8Array.prototype.set.call(
       target,
-      this.subarray(start, start + len),
+      this.subarray(start, end),
       targetStart
     )
   }
@@ -1951,17 +1964,19 @@ Buffer.prototype.fill = function fill (val, start, end, encoding) {
       encoding = end
       end = this.length
     }
-    if (val.length === 1) {
-      var code = val.charCodeAt(0)
-      if (code < 256) {
-        val = code
-      }
-    }
     if (encoding !== undefined && typeof encoding !== 'string') {
       throw new TypeError('encoding must be a string')
     }
     if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
       throw new TypeError('Unknown encoding: ' + encoding)
+    }
+    if (val.length === 1) {
+      var code = val.charCodeAt(0)
+      if ((encoding === 'utf8' && code < 128) ||
+          encoding === 'latin1') {
+        // Fast path: If `val` fits into a single byte, use that numeric value.
+        val = code
+      }
     }
   } else if (typeof val === 'number') {
     val = val & 255
@@ -1989,8 +2004,12 @@ Buffer.prototype.fill = function fill (val, start, end, encoding) {
   } else {
     var bytes = Buffer.isBuffer(val)
       ? val
-      : utf8ToBytes(new Buffer(val, encoding).toString())
+      : Buffer.from(val, encoding)
     var len = bytes.length
+    if (len === 0) {
+      throw new TypeError('The value "' + val +
+        '" is invalid for argument "value"')
+    }
     for (i = 0; i < end - start; ++i) {
       this[i + start] = bytes[i % len]
     }
@@ -2002,11 +2021,13 @@ Buffer.prototype.fill = function fill (val, start, end, encoding) {
 // HELPER FUNCTIONS
 // ================
 
-var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
+var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
 
 function base64clean (str) {
+  // Node takes equal signs as end of the Base64 encoding
+  str = str.split('=')[0]
   // Node strips out invalid characters like \n and \t from the string, base64-js does not
-  str = stringtrim(str).replace(INVALID_BASE64_RE, '')
+  str = str.trim().replace(INVALID_BASE64_RE, '')
   // Node converts strings with length < 2 to ''
   if (str.length < 2) return ''
   // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
@@ -2014,11 +2035,6 @@ function base64clean (str) {
     str = str + '='
   }
   return str
-}
-
-function stringtrim (str) {
-  if (str.trim) return str.trim()
-  return str.replace(/^\s+|\s+$/g, '')
 }
 
 function toHex (n) {
@@ -2143,12 +2159,21 @@ function blitBuffer (src, dst, offset, length) {
   return i
 }
 
-function isnan (val) {
-  return val !== val // eslint-disable-line no-self-compare
+// ArrayBuffer or Uint8Array objects from other contexts (i.e. iframes) do not pass
+// the `instanceof` check but they should be treated as of that type.
+// See: https://github.com/feross/buffer/issues/166
+function isInstance (obj, type) {
+  return obj instanceof type ||
+    (obj != null && obj.constructor != null && obj.constructor.name != null &&
+      obj.constructor.name === type.name)
+}
+function numberIsNaN (obj) {
+  // For IE11 support
+  return obj !== obj // eslint-disable-line no-self-compare
 }
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":3,"ieee754":12,"isarray":13}],5:[function(require,module,exports){
+}).call(this,require("buffer").Buffer)
+},{"base64-js":3,"buffer":4,"ieee754":13}],5:[function(require,module,exports){
 (function (Buffer){
 var clone = (function() {
 'use strict';
@@ -2215,7 +2240,13 @@ function clone(parent, circular, depth, prototype) {
     } else if (clone.__isDate(parent)) {
       child = new Date(parent.getTime());
     } else if (useBuffer && Buffer.isBuffer(parent)) {
-      child = new Buffer(parent.length);
+      if (Buffer.allocUnsafe) {
+        // Node.js >= 4.5.0
+        child = Buffer.allocUnsafe(parent.length);
+      } else {
+        // Older Node.js versions
+        child = new Buffer(parent.length);
+      }
       parent.copy(child);
       return child;
     } else {
@@ -2410,41 +2441,48 @@ convert.rgb.hsl = function (rgb) {
 };
 
 convert.rgb.hsv = function (rgb) {
-	var r = rgb[0];
-	var g = rgb[1];
-	var b = rgb[2];
-	var min = Math.min(r, g, b);
-	var max = Math.max(r, g, b);
-	var delta = max - min;
+	var rdif;
+	var gdif;
+	var bdif;
 	var h;
 	var s;
-	var v;
 
-	if (max === 0) {
-		s = 0;
+	var r = rgb[0] / 255;
+	var g = rgb[1] / 255;
+	var b = rgb[2] / 255;
+	var v = Math.max(r, g, b);
+	var diff = v - Math.min(r, g, b);
+	var diffc = function (c) {
+		return (v - c) / 6 / diff + 1 / 2;
+	};
+
+	if (diff === 0) {
+		h = s = 0;
 	} else {
-		s = (delta / max * 1000) / 10;
+		s = diff / v;
+		rdif = diffc(r);
+		gdif = diffc(g);
+		bdif = diffc(b);
+
+		if (r === v) {
+			h = bdif - gdif;
+		} else if (g === v) {
+			h = (1 / 3) + rdif - bdif;
+		} else if (b === v) {
+			h = (2 / 3) + gdif - rdif;
+		}
+		if (h < 0) {
+			h += 1;
+		} else if (h > 1) {
+			h -= 1;
+		}
 	}
 
-	if (max === min) {
-		h = 0;
-	} else if (r === max) {
-		h = (g - b) / delta;
-	} else if (g === max) {
-		h = 2 + (b - r) / delta;
-	} else if (b === max) {
-		h = 4 + (r - g) / delta;
-	}
-
-	h = Math.min(h * 60, 360);
-
-	if (h < 0) {
-		h += 360;
-	}
-
-	v = ((max / 255) * 1000) / 10;
-
-	return [h, s, v];
+	return [
+		h * 360,
+		s * 100,
+		v * 100
+	];
 };
 
 convert.rgb.hwb = function (rgb) {
@@ -3269,11 +3307,10 @@ var conversions = require('./conversions');
 	conversions that are not possible simply are not included.
 */
 
-// https://jsperf.com/object-keys-vs-for-in-with-closure/3
-var models = Object.keys(conversions);
-
 function buildGraph() {
 	var graph = {};
+	// https://jsperf.com/object-keys-vs-for-in-with-closure/3
+	var models = Object.keys(conversions);
 
 	for (var len = models.length, i = 0; i < len; i++) {
 		graph[models[i]] = {
@@ -3356,6 +3393,8 @@ module.exports = function (fromModel) {
 
 
 },{"./conversions":6}],9:[function(require,module,exports){
+'use strict'
+
 module.exports = {
 	"aliceblue": [240, 248, 255],
 	"antiquewhite": [250, 235, 215],
@@ -3506,6 +3545,7 @@ module.exports = {
 	"yellow": [255, 255, 0],
 	"yellowgreen": [154, 205, 50]
 };
+
 },{}],10:[function(require,module,exports){
 /* MIT license */
 var colorNames = require('color-name');
@@ -3729,7 +3769,9 @@ for (var name in colorNames) {
    reverseNames[colorNames[name]] = name;
 }
 
-},{"color-name":9}],11:[function(require,module,exports){
+},{"color-name":11}],11:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],12:[function(require,module,exports){
 /* MIT license */
 var clone = require('clone');
 var convert = require('color-convert');
@@ -4190,10 +4232,10 @@ Color.prototype.setChannel = function (space, index, val) {
 
 module.exports = Color;
 
-},{"clone":5,"color-convert":7,"color-string":10}],12:[function(require,module,exports){
+},{"clone":5,"color-convert":7,"color-string":10}],13:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
-  var eLen = nBytes * 8 - mLen - 1
+  var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
   var eBias = eMax >> 1
   var nBits = -7
@@ -4206,12 +4248,12 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   e = s & ((1 << (-nBits)) - 1)
   s >>= (-nBits)
   nBits += eLen
-  for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
 
   m = e & ((1 << (-nBits)) - 1)
   e >>= (-nBits)
   nBits += mLen
-  for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
 
   if (e === 0) {
     e = 1 - eBias
@@ -4226,7 +4268,7 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 
 exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   var e, m, c
-  var eLen = nBytes * 8 - mLen - 1
+  var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
   var eBias = eMax >> 1
   var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
@@ -4259,7 +4301,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
       m = 0
       e = eMax
     } else if (e + eBias >= 1) {
-      m = (value * c - 1) * Math.pow(2, mLen)
+      m = ((value * c) - 1) * Math.pow(2, mLen)
       e = e + eBias
     } else {
       m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
@@ -4275,13 +4317,6 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
   buffer[offset + i - d] |= s * 128
 }
-
-},{}],13:[function(require,module,exports){
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
 
 },{}]},{},[1])(1)
 });
