@@ -30,7 +30,8 @@
 }
 
 #nav_collections .nav-item-container:focus iron-icon,
-.nav-item-container:focus iron-icon {
+.nav-item-container:focus iron-icon,
+.more.gpm-quick-nav {
  color: <<FORE_SECONDARY>>;
 }
 
