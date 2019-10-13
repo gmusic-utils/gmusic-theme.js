@@ -21,3 +21,13 @@ body,
   background-image: url('ani_equalizer_black.gif');
   background-size: 40px 40px;
 }
+input.material-search.label-input-label::-webkit-input-placeholder {
+    color: #212121;
+}
+.qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
+	background-color: <<ALPHA 0.84>><<FORE_PRIMARY>><</ALPHA>>;
+	color: #212121;
+}
+paper-header-panel#content-container.transparent #material-app-bar #material-one-middle .material-search::-webkit-input-placeholder {
+	color: <<FORE_PRIMARY>>;
+}

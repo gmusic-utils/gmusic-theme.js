@@ -675,6 +675,13 @@ gpm-card-grid > [slot="title"] {
 ::shadow ::-webkit-scrollbar-thumb:active {
   background-color: rgba(255, 255, 255, 0.125);
 }
+.qp #material-one-middle .material-search::-webkit-input-placeholder{
+  color:<<FORE_PRIMARY>>;
+}
+.qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
+  background-color: <<ALPHA 0.84>><<FORE_PRIMARY>><</ALPHA>>;
+  color:<<FORE_PRIMARY>>;
+=======
 
 /* Fix loading spinner on playlist dot menu */
 .goog-menuheader .spinner {
