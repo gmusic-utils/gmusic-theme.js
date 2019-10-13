@@ -30,7 +30,8 @@
 }
 
 #nav_collections .nav-item-container:focus iron-icon,
-.nav-item-container:focus iron-icon {
+.nav-item-container:focus iron-icon,
+.more.gpm-quick-nav {
  color: <<FORE_SECONDARY>>;
 }
 
@@ -111,8 +112,8 @@ paper-toggle-button[checked] .toggle-ink {
  color: <<FORE_SECONDARY>>;
 }
 
-.paper-slider-0 #sliderKnobInner.paper-slider,
-#sliderKnobInner.paper-slider,
+paper-slider .slider-knob-inner.paper-slider,
+.slider-knob-inner.paper-slider,
 .paper-progress-0 #primaryProgress.paper-progress {
  background-color: <<FORE_SECONDARY>>;
  border-color: <<FORE_SECONDARY>>;
@@ -131,7 +132,7 @@ paper-ripple#ink.paper-slider {
 }
 
 .paper-input-container-0 .focused-line.paper-input-container {
- background-color: <<FORE_SECONDARY>>;
+ border-bottom: 2px solid <<FORE_SECONDARY>>;
 }
 
 #player.material .material-player-middle paper-icon-button[data-id="repeat"][value="LIST_REPEAT"],
@@ -196,10 +197,6 @@ button.goog-buttonset-default:hover {
   --sj-play-button-pulse-color: <<ALPHA 0.3>><<FORE_SECONDARY>><</ALPHA>>;
 }
 
-.focused-line.paper-input-container {
-  background-color: <<FORE_SECONDARY>>;
-}
-
 .input-content.label-is-floating.paper-input-container  label,
 .input-content.label-is-floating.paper-input-container  .paper-input-label {
   color: <<FORE_SECONDARY>>;
@@ -246,5 +243,11 @@ body.qp #material-app-bar #material-one-left .music-logo {
 paper-dialog input::selection,
 paper-dialog textarea::selection {
   background: <<ALPHA 0.6>><<FORE_SECONDARY>><</ALPHA>>;
+}
+/** Update End **/
+
+/** 19/04/2017 Update **/
+gpm-detail-page-header #playButton #buttonContent {
+  background: <<FORE_SECONDARY>>;
 }
 /** Update End **/

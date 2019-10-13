@@ -457,8 +457,10 @@ paper-button#unsubscribe-playlist-button iron-icon[icon="sj:subscribed"] path:la
 /** Update End **/
 
 /** 15/11/2016 Update **/
-.sj-scrolling-module-0 h2 {
-  color: white;
+sj-scrolling-module h2,
+sj-scrolling-module h2 span.tooltip,
+sj-scrolling-module [slot="subtitle"] {
+  color: <<FORE_PRIMARY>>;
 }
 
 paper-header-panel#content-container:not([style-scope]):not(.style-scope):not(.transparent)[at-top] paper-toolbar#material-app-bar {
@@ -591,6 +593,55 @@ sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
 }
 /** Update End **/
 
+/** 19/04/2017 Update **/
+gpm-detail-page-header .gpm-detail-page-header > * {
+  color: <<DARKEN 0.2>><<FORE_PRIMARY>><</DARKEN>>;
+}
+
+gpm-detail-page-header[description-overflows] #descriptionWrapper.gpm-detail-page-header:hover {
+  background: <<DARKEN 0.7>><<FORE_PRIMARY>><</DARKEN>>;
+}
+/** Update End **/
+
+/** Update 28/06/2017 **/
+.top-tracks {
+  background-color: <<BACK_PRIMARY>>;
+}
+.more-songs-container {
+  border-top-color: <<BACK_PRIMARY>>;
+}
+gpm-vertical-list #items.gpm-vertical-list {
+  background-color: <<BACK_PRIMARY>>;
+}
+gpm-vertical-list #items.gpm-vertical-list > *:hover,
+gpm-vertical-list #items.gpm-vertical-list > *[focused] {
+  background-color: <<BACK_HIGHLIGHT>>;
+}
+paper-tabs #tabsContainer.paper-tabs {
+  color: <<FORE_PRIMARY>>;
+}
+gpm-card-grid > [slot="title"] {
+  color: <<FORE_PRIMARY>>;
+}
+#breadcrumbs-dropdown-button,
+#grouped-card-dropdown-button {
+  color: <<FORE_PRIMARY>>;
+}
+#playlist-drawer-button {
+  color: <<FORE_PRIMARY>>;
+}
+/** Update End **/
+
+/** Update 15/8/2017 **/
+#material-app-bar #countSummary {
+  color: <<FORE_PRIMARY>>;
+}
+
+#material-app-bar #action-bar-container {
+  color: <<FORE_PRIMARY>>;
+}
+/** Update End **/
+
 /** Scrollbar Theming **/
 ::-webkit-scrollbar,
 ::shadow ::-webkit-scrollbar {
@@ -630,4 +681,10 @@ sj-search-box sj-entity-suggestion.sj-search-box:last-of-type {
 .qp #material-one-middle .material-search, .qp #material-one-middle .material-search:focus {
   background-color: <<ALPHA 0.84>><<FORE_PRIMARY>><</ALPHA>>;
   color:<<FORE_PRIMARY>>;
+=======
+
+/* Fix loading spinner on playlist dot menu */
+.goog-menuheader .spinner {
+    background: <<BACK_PRIMARY>> url(ani_loading_white.gif) no-repeat center center;
+    background-size: 30px 30px;
 }
